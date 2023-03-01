@@ -1,0 +1,9 @@
+@import "global";
+@import "vars";
+@import "utils";
+@import "mixins";
+
+@import "../components/header/header";
+@import "../components/footer/footer";
+@import "../components/hero-slider/hero-slider";
+@import "../components/select-lang/index";

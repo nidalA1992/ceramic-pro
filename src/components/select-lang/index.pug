@@ -1,0 +1,5 @@
+div.select-lang
+  div.select-lang-display
+  div.select-lang-menu
+    each option in [{value: 'ru', label: 'RU'}, {value: 'uz', label: 'UZ'}]
+      div(data-value= option.value).select-lang-option=option.label

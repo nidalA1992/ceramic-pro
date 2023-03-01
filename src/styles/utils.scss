@@ -1,0 +1,12 @@
+.section-title {}
+
+.section-wrapper {
+  display: grid;
+  grid-template-columns: 1fr min(1440px, calc(100% - 100px)) 1fr;
+  grid-column-gap: 50px;
+  width: 100%;
+  
+  & > * {
+    grid-column: 2;
+  }
+}

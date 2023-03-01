@@ -1,0 +1,6 @@
+mixin nav(items, className)
+  nav(class='#{className}-nav')
+    ul(class='#{className}-nav-list')
+      each item in items
+        li(class='#{className}-nav-item')
+          a(class='#{className}-nav-item-link' href=item.href) #{item.label}
