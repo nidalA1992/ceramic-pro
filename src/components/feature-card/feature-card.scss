@@ -1,0 +1,25 @@
+@use 'src/styles/mixins';
+
+.feature-card {
+  background-color: var(--greyEC);
+  flex-basis: 32%;
+  padding: 30px;
+  
+  &__title {
+    @include mixins.flex(start, center);
+    flex-flow: row-reverse;
+    font-size: 25px;
+    color: var(--grey38);
+    margin-bottom: 30px;
+    
+    svg {
+      margin-right: 15px;
+    }
+  }
+  
+  &__descr {
+    color: var(--grey38);
+    line-height: 1.5;
+    max-width: 70%;
+  }
+}

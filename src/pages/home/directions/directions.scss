@@ -1,0 +1,18 @@
+@use './directions-slides/directions-slide';
+
+.directions {
+  .splide__arrow {
+    top: 90%;
+    &--prev {
+      left: initial;
+      right: 200px;
+    }
+
+    &--next {
+      right: 120px;
+    }
+
+    scale: 2;
+    background: transparent;
+  }
+}

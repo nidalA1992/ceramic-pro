@@ -1,6 +1,16 @@
-mixin nav(items, className)
-  nav(class='#{className}-nav')
-    ul(class='#{className}-nav-list')
+
+
+mixin nav(className)
+  nav(class=className + '__nav')
+    ul(class=className + '__nav-list')
+      - const items = [
+      -  {href: '#', label: 'О нас'},
+      -  {href: '#', label: 'Новости'},
+      -  {href: '#', label: 'Компания'},
+      -  {href: '#', label: 'Карта'},
+      -  {href: '#', label: 'Продукция'},
+      -  {href: '#', label: 'Сертификаты'},
+      - ];
       each item in items
-        li(class='#{className}-nav-item')
-          a(class='#{className}-nav-item-link' href=item.href) #{item.label}
+        li(class=className + '__nav-item')
+          a(class=className + '__nav-item-link' href=item.href) #{item.label}

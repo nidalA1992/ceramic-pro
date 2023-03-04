@@ -1,0 +1,26 @@
+include ./slides/index
+
+-const benefitsSlides = [
+- {
+-   img: 'images/iso-img.png',
+-   title: 'Гарантия качества',
+-   descr: 'ISO Сертификат качества 14001 SGS'
+- },
+- {
+-   img: 'images/light-on.png',
+-   title: 'Иновации',
+-   descr: 'Передовые технологии защиты поверхности'
+- },
+- {
+-   img: 'images/70-img.svg',
+-   title: '80+ стран',
+-   descr: 'Единое качество в более 80 странах'
+- }
+-];
+
+
+div.splide.benefits-slider
+  div.splide__track
+    div.splide__list
+      each slide in benefitsSlides
+        +benefits-slide(slide.img, slide.title, slide.descr)

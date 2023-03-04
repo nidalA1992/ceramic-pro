@@ -1,0 +1,40 @@
+@use 'src/styles/mixins';
+
+.product-card {
+  @include mixins.flex(center, center, column);
+  position: relative;
+  
+  $mb: 20px;
+  
+  cursor: pointer;
+  
+  &:hover {
+    img {
+      scale: 1.05;
+    }
+    
+    a {
+      color: var(--main-pink);
+    }
+  }
+  
+  &__img {
+    display: inline-block;
+    margin-bottom: $mb;
+    transition: scale var(--tr-dur) var(--tr-tf);
+
+  }
+  
+  &__name {
+    font-size: 16px;
+    margin-bottom: $mb;
+  }
+  
+  &__link {
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+  }
+}

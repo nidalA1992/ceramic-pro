@@ -1,0 +1,8 @@
+mixin directions-slide(title, descr, img)
+  div(class="directions-slide splide__slide section-wrapper", style={background: `linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) 40%), url(${img})`})
+    div(class="directions-slide__content")
+      h3(class="directions-slide__content-title") !{title}
+      p(class="directions-slide__content-descr") !{descr}
+    button.primary-button Подробнее
+      span
+    

@@ -1,0 +1,30 @@
+@use 'src/styles/mixins';
+
+.benefits-slide.splide__slide {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  z-index: 10;
+  
+  .image {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .title {
+    text-transform: uppercase;
+    @include mixins.font(22px, 700, null, black);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    padding-left: 50px;
+  }
+  
+  .descr {
+    font-size: 14px;
+    max-width: 70%;
+    margin-left: auto;
+  }
+}

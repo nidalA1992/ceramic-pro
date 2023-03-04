@@ -1,0 +1,34 @@
+@use 'src/styles/mixins';
+
+.directions-slide {
+  padding-block: 140px;
+  grid-template-rows: 1fr;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  
+  &__content {
+    &-title {
+      @include mixins.font(40px, null, null, var(--white));
+      text-transform: uppercase;
+      margin-bottom: var(--section-title-offset);
+      
+      span {
+        color: var(--main-pink);
+      }
+    }
+    
+    &-descr {
+      @include mixins.font(null, 300, 1.5, var(--white));
+      margin-bottom: 80px;
+      letter-spacing: 1px;
+      word-spacing: 3px;
+      width: 40%;
+      padding-left: 100px;
+    }
+  }
+  
+  .primary-button {
+    justify-self: start;
+  }
+}

@@ -1,9 +1,9 @@
-@import "global";
-@import "vars";
-@import "utils";
-@import "mixins";
+@use "global";
+@use "vars";
+@use "utils";
+@use "mixins";
 
-@import "../components/header/header";
-@import "../components/footer/footer";
-@import "../components/hero-slider/hero-slider";
-@import "../components/select-lang/index";
+@use "src/components/header/header";
+@use "src/components/footer/footer";
+@use "src/components/hr/hr";
+@use "src/components/socials/index";

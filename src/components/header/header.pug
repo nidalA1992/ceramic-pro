@@ -1,9 +1,11 @@
+include ../nav/index
+  
 header.header.section-wrapper
   div.header__container
     div.header__top
       include ../logo/index
-      include ../select-lang/index
+      include select-lang/index
       button.header__connect-button Связаться с нами
-
+    include ../hr/index
     div.header__bottom
-    
+      +nav('header')

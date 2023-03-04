@@ -1,0 +1,33 @@
+@use 'src/styles/mixins';
+
+.label-links {
+  @include mixins.flex(space-between);
+  padding-block: 40px;
+
+  &__link {
+    @include mixins.flex(center, center);
+    @include mixins.font(25px, 300, null, var(--white));
+    flex-basis: 32%;
+    color: var(--mid-grey);
+
+    transition: color var(--tr-dur) var(--tr-tf);
+
+    svg {
+      margin-left: 20px;
+    }
+
+    svg path, svg rect {
+      fill: var(--mid-grey);
+      transition: fill var(--tr-dur) var(--tr-tf);
+    }
+
+    &:hover {
+      color: var(--white);
+      svg path, svg rect {
+        fill: var(--white);
+      }
+    }
+
+  }
+}
+  

@@ -3,15 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    home: path.resolve(__dirname, 'src', 'pages', 'home', 'index.ts'),
-    aboutus: path.resolve(__dirname, 'src', 'pages','aboutus', 'index.ts'),
+    home: path.resolve(__dirname, 'src', 'pages', 'home', 'index.js'),
+    aboutus: path.resolve(__dirname, 'src', 'pages','aboutus', 'index.js'),
   },
   output: {
     filename: '[name]/index.js',
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'images/[hash][ext][query]',
-    // publicPath: "/",
     clean: true,
+    assetModuleFilename: 'images/[name][ext]',
   },
   module: {
     rules: [
@@ -23,11 +22,6 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg)$/i,
         type: 'asset/resource',
-      },
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
       },
       {
         test: /\.pug$/,
@@ -42,7 +36,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'home',
       template: path.join(__dirname, "src", "pages", "home", "index.pug"),
-      filename: "home/index.html",
+      filename: "index.html",
       chunks: ["home"],
       minify: false,
     }),
@@ -54,9 +48,6 @@ module.exports = {
       minify: false,
     }),
   ],
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js']
-  },
   optimization: {
     usedExports: true,
     moduleIds: 'deterministic',

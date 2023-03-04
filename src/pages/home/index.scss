@@ -1,1 +1,14 @@
-@import "../../styles/index.scss";
+@use 'src/styles/lib/splide.min.css';
+@use "src/styles/index.scss";
+
+@use "src/components/label-links/label-links";
+
+@use "about-us/about-us";
+@use "hero/hero-slider";
+@use "directions/directions";
+@use "products/products";
+@use 'label-nav/label-nav';
+@use 'benefits/benefits';
+@use 'label-socials/label-socials';
+@use 'news/news';
+

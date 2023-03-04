@@ -1,0 +1,4 @@
+mixin article(title, href, img)
+  article(style={'background-image': `url("${img}")`}).news__article-item
+    div.news__article-item-title #{title}
+    a.news__article-item-link.arrow-link(href=href) Читать

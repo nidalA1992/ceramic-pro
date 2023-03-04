@@ -1,0 +1,42 @@
+@use 'src/styles/mixins';
+@use './product-card/product-card';
+
+.products {
+  position: relative;
+  padding-top: var(--section-offset);
+  padding-bottom: calc(var(--section-offset) * 1.3);
+  
+  .splide {
+    &__back-text {
+      @include mixins.font(15vw, 700, null, white);
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left:50%;
+      white-space: nowrap;
+      grid-column: 1 / -1;
+    }
+    
+    &__arrow {
+      background: transparent;
+      scale: 3;
+      top: 75%;
+
+      svg path {
+        fill: var(--black);
+      }
+      &--prev {
+        left: initial;
+        right: -10%;
+      }
+
+      &--next {
+        right: -20%;
+      }
+    }
+  }
+  
+  &__title {
+    margin-bottom: var(--section-title-offset);
+  }
+}

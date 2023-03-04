@@ -1,0 +1,17 @@
+@use 'slide-one/slide-one';
+@use 'slide-two/slide-two';
+@use 'slide-three/slide-three';
+
+.hero {
+  padding-top: 150px;
+  background: var(--black-white-gradient);
+  
+  .splide__pagination {
+    grid-column: 1 / -1;
+    bottom: 30px;
+    
+    .is-active {
+      background-color: var(--main-pink);
+    }
+  }
+}

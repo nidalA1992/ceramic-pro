@@ -1,0 +1,46 @@
+@use 'src/styles/mixins';
+
+@use './slider/benefits-slider';
+
+.benefits {
+  padding-block: var(--section-offset);
+  
+  &__container {
+    @include mixins.flex;
+  }
+  
+  &__right {
+    margin-inline: auto;
+    align-self: center;
+  }
+  
+  &__title {
+    margin-bottom: var(--section-title-offset);
+    max-width: 280px;
+  }
+  
+  &__descr {
+    @include mixins.font(null, 300, null, var(--grey38));
+    max-width: 550px;
+    padding-left: 100px;
+  }
+  
+  .splide__pagination {
+    gap: 5px;
+    li button {
+      background-color: transparent;
+      border: 1px solid black;
+      opacity: 1;
+      width: 7px;
+      height: 7px;
+      margin: 2px;
+      flex: 0 0 auto;
+      
+    }
+
+    .splide__pagination__page.is-active {
+      background-color: black;
+    }
+  }
+  
+}

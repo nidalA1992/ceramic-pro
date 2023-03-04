@@ -2,13 +2,21 @@
   --main-pink: #EC1D91;
   
   --black: #0C0C0C;
-  --white: white;
+  --white: #dddddd;
   
-  --light-grey: #737373;
+  --background-main: #f3f3f3;
+  
+  --greyEC: #ececec;
+  --grey38: #383838;
   --dark-grey: #D9D9D9;
+  --light-grey: #737373;
+  --mid-grey: #454545;
   
-  --black-white-gradient: linear-gradient(168.59deg, #060606 2.67%, rgba(12, 11, 12, 0.5) 89.31%);
+  --black-white-gradient: linear-gradient(168.59deg, #060606 2.67%, rgba(12, 11, 12, 0.89) 90%);
   
   --tr-dur: 200ms;
   --tr-tf: ease-in;
+  
+  --section-offset: 80px;
+  --section-title-offset: 80px;
 }

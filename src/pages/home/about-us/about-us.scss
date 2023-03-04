@@ -1,0 +1,30 @@
+@use 'src/styles/mixins';
+@use 'src/components/feature-card/feature-card';
+
+.about-us {
+  $mb: 30px;
+  
+  padding-block: var(--section-offset);
+  
+  &__container {
+    background-image: url("../../assets/about-us.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+  
+  &__title {
+    margin-bottom: var(--section-title-offset);
+  }
+  
+  &__descr {
+    color: var(--grey38);
+    line-height: 1.5;
+    font-weight: 300;
+    max-width: 40%;
+    margin-bottom: 140px;
+  }
+
+  &__feature-card-list {
+    @include mixins.flex(space-between);
+  }
+}

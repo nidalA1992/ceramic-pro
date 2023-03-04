@@ -1,0 +1,16 @@
+include article/index
+
+-const articles = [
+-   {title: 'Новая линейка продукции', href: '#', img: 'images/news-1.png'},
+-   {title: 'Важная информация для партнеров', href: '#', img: 'images/news-2.png'},
+-   {title: 'Новая линейка продукции', href: '#', img: 'images/news-1.png'},
+-   {title: 'Важная информация для партнеров', href: '#', img: 'images/news-2.png'},
+-];
+
+section.news.section-wrapper
+  div.news__container
+    h2.news__title.section-title Последние <span>нвости</span>
+    ul.news__article-list
+      each article in articles
+        +article(article.title, article.href, article.img)
+    a(href="#").news__more-link.arrow-link Читать больше

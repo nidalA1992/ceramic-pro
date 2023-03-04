@@ -1,3 +1,39 @@
-footer {
-  color: red;
+@use 'src/styles/mixins';
+.footer {
+  background: var(--black-white-gradient);
+
+  &__bottom {
+    @include mixins.flex(space-between, center);
+    padding-block: 40px;
+  }
+  
+  &__nav {
+    height: fit-content;
+    &-list {
+      @include mixins.flex(null, null, column, wrap);
+      max-height: 150px;
+      column-gap: 150px;
+    }
+    &-item {
+      &-link {
+        @include mixins.font(14px, 300, 3, var(--dark-grey));
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 1px solid transparent;
+        &:hover {
+          color: var(--main-pink);
+        }
+      }
+    } 
+  }
+  
+  .logo {
+    height: 60px;
+    width: 243px;
+    margin-bottom: 20px;
+  }
+  
+  //.socials {
+  //  flex-direction: column;
+  //}
 }

@@ -1,14 +1,10 @@
+include ../nav/index
+  
 footer.footer.section-wrapper
   div.footer__container
-    div.footer__top
-    //  icon-link component
-    | icon-link component
-    | icon-link component
-    | icon-link component
-  div.footer__bottom
-        //nav component
-        |nav
-        //socials component
-        |socials
-        //logo component
-        |logo
+    include ../hr/index
+    div.footer__bottom
+      +nav('footer')
+      div
+        include ../logo/index
+        include ../socials/index

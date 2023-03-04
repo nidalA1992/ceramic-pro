@@ -1,0 +1,33 @@
+@use 'src/styles/mixins';
+
+.news__article-item {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 1 0 45%;
+  padding: 165px 30px 30px;
+  &-title {
+    @include mixins.font(22px, 700, null, white);
+    margin-bottom: 10px;
+  }
+  
+  &-link {
+    color: var(--main-pink);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid transparent;
+    width: fit-content;
+    line-height: 1;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+    
+    &:hover {
+      border-color: var(--main-pink);
+    }
+  }
+}
