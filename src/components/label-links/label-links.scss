@@ -6,11 +6,11 @@
   padding-block: 40px;
   &__link {
     @include mixins.flex(center, center);
-    @include mixins.font(25px, 300, null, var(--white));
+    @include mixins.font(25px, 600, null, var(--white));
     white-space: nowrap;
     flex-basis: 30%;
     color: var(--mid-grey);
-
+    
     transition: color var(--tr-dur) var(--tr-tf);
 
     svg {
@@ -33,17 +33,27 @@
   @media (max-width: vars.$desc-width-s) {
     & {
       flex-direction: column;
-      gap: 50px;
+      gap: 15px;
       
       &__link {
-        flex-direction: column;
-        gap: 30px;
+        position: relative;
+        z-index: 10;
         align-self: center;
-        justify-content: center;
+        justify-content: start;
         min-height: 124px;
-        min-width: 350px;
+        width: 300px;
+        color: white;
         svg {
+          position: absolute;
+          z-index: -1;
+          right: 30px;
           margin-left: 0;
+        }
+        
+        &:hover {
+          svg path, svg rect {
+            fill: var(--light-grey);
+          }
         }
       }
     }
@@ -53,9 +63,7 @@
     & {
       gap: 30px;
       &__link {
-        gap: 20px;
         font-size: 22px;
-        min-width: 300px;
       }
     }
   }

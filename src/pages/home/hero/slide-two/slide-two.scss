@@ -40,6 +40,10 @@
     background-size: 40%;
     padding-top: 0;
     
+    &__digit {
+      font-size: 120px;
+    }
+    
     &__title {
       max-width: 600px;
       margin-bottom: 50px;

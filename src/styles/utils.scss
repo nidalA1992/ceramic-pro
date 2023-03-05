@@ -97,7 +97,19 @@
   
   @media (max-width: vars.$mob-width) {
     & {
-      font-size: 14px;
+      font-size: 12px;
+      padding: 10px 30px;
+      border: none;
+      
+      background-color: var(--main-pink);
+      
+      &::before, &::after {
+        display: none;
+      }
+      
+      span {
+        display: none;
+      }
     }
   }
 }

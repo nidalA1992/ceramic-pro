@@ -53,8 +53,6 @@ const options2 = {
   arrows: true
 };
 
-new Select('.select-lang').init();
-
 new Splide(".hero", options).mount();
 new Splide(".directions", options2).mount();
 new Splide(".products-slider", {
@@ -75,3 +73,5 @@ new Splide(".products-slider", {
   }
 }).mount();
 new Splide(".benefits-slider", options).mount();
+
+new Select('.select-lang').init();

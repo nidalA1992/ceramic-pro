@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     home: path.resolve(__dirname, 'src', 'pages', 'home', 'index.js'),
-    aboutus: path.resolve(__dirname, 'src', 'pages','aboutus', 'index.js'),
+    ion: path.resolve(__dirname, 'src', 'pages','ion', 'index.js'),
   },
   output: {
     filename: '[name]/index.js',
@@ -42,9 +42,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'aboutus',
-      template: path.join(__dirname, "src", "pages", "aboutus", "index.pug"),
-      filename: "aboutus/index.html",
-      chunks: ["aboutus"],
+      template: path.join(__dirname, "src", "pages", "ion", "index.pug"),
+      filename: "ion/index.html",
+      chunks: ["ion"],
       minify: false,
     }),
   ],
