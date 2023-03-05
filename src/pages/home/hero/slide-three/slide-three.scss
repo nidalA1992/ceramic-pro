@@ -43,6 +43,11 @@
   .slide-three {
     background-image: url("../../assets/hero-slide-mob-3.png");
     background-size: 110%;
+    
+    &__title {
+      max-width: 300px;
+    }
+    
     &__descr {
       display: none;
     }
