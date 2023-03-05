@@ -1,0 +1,19 @@
+@use 'src/components/form/form';
+@use 'src/styles/mixins';
+@use 'content/content';
+
+.feedback {
+  padding-block: 130px;
+  background-image: url("../../assets/feedback-form.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__container {
+    @include mixins.flex(space-between);
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    & > form {
+      flex-basis: 40%;
+    }
+  }
+}

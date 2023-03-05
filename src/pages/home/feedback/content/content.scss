@@ -1,0 +1,23 @@
+@use 'src/styles/mixins';
+
+.feedback__content {
+  flex-basis: 50%;
+  $mb: 25px;
+  padding-top: 50px;
+  padding-right: 150px;
+  
+  &-title {
+    @include mixins.font(36px, 600, null, var(--white));
+    margin-bottom: $mb;
+  }
+  
+  &-subtitle {
+    @include mixins.font(22px, 600, null, var(--main-pink));
+    margin-bottom: $mb;
+    text-transform: uppercase;
+  }
+  
+  &-descr {
+    @include mixins.font(18px, 400, null, var(--white));
+  }
+}

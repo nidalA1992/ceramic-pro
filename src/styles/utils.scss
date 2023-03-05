@@ -25,7 +25,7 @@
 }
 
 .section-title {
-  @include mixins.font(42px, 400, null, black);
+  @include mixins.font(42px, 600, null, black);
 
   span {
     color: var(--main-pink);

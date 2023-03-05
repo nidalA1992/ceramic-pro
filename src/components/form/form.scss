@@ -1,0 +1,29 @@
+@use "src/styles/mixins";
+
+.form {
+  @include mixins.flex(null, null, column);
+  padding: 45px 60px;
+  gap: 30px;
+  
+  &__button {
+    align-self: center;
+  }
+  
+  &__input {
+    @include mixins.font(14px, 300, null, white);
+    padding: 20px 25px;
+    border: none;
+    background-color: rgba(236, 29, 145, 0.5);
+    outline: none;
+    transition: background-color var(--tr-dur) var(--tr-tf);
+    
+    &:focus {
+      background-color: rgba(236, 29, 145, 0.7); 
+    }
+    
+    &::placeholder {
+      @include mixins.font(14px, 300, null, var(--white));
+      color: var(--white);
+    }
+  }
+}
