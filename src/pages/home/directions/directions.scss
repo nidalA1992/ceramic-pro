@@ -1,4 +1,5 @@
 @use './directions-slides/directions-slide';
+@use 'src/styles/vars';
 
 .directions {
   .splide__arrow {
@@ -14,5 +15,22 @@
 
     scale: 2;
     background: transparent;
+  }
+  
+  @media (max-width: vars.$mob-width) {
+   & {
+     .splide__arrow {
+       top: 95%;
+       scale: 1.5;
+
+       &--prev {
+         right: 80px;
+       }
+
+       &--next {
+         right: 20px;
+       }
+     }
+   }
   }
 }

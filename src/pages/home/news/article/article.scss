@@ -1,6 +1,9 @@
 @use 'src/styles/mixins';
+@use 'src/styles/vars';
 
 .news__article-item {
+  @include mixins.flex(null, null, null, wrap);
+  gap: 5px;
   position: relative;
   background-position: center;
   background-size: cover;
@@ -9,7 +12,6 @@
   padding: 165px 30px 30px;
   &-title {
     @include mixins.font(22px, 700, null, white);
-    margin-bottom: 10px;
   }
   
   &-link {
@@ -28,6 +30,21 @@
     
     &:hover {
       border-color: var(--main-pink);
+    }
+  }
+  
+  @media(max-width: vars.$tab-width) {
+    & {
+      &-title {
+        font-size: 18px;
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  @media(max-width: vars.$mob-width) {
+    & {
+      flex-basis: 100%;
     }
   }
 }

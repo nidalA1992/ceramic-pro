@@ -1,8 +1,9 @@
 @use 'src/styles/mixins';
+@use 'src/styles/vars';
 
 .feature-card {
   background-color: var(--greyEC);
-  flex-basis: 32%;
+  flex: 1 1 300px;
   padding: 30px;
   
   &__title {
@@ -20,6 +21,22 @@
   &__descr {
     color: var(--grey38);
     line-height: 1.5;
-    max-width: 70%;
+    max-width: 330px;
+  }
+  
+  @media (max-width: vars.$tab-width) {
+    & {
+      padding: 20px;
+      
+      &__title {
+        margin-bottom: 15px;
+        font-size: 20px;
+        
+        svg {
+          height: 40px;
+          margin-right: 7px;
+        }
+      }
+    }
   }
 }

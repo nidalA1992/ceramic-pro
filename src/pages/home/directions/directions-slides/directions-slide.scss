@@ -1,4 +1,5 @@
 @use 'src/styles/mixins';
+@use 'src/styles/vars';
 
 .directions-slide {
   padding-block: 140px;
@@ -23,12 +24,55 @@
       margin-bottom: 80px;
       letter-spacing: 1px;
       word-spacing: 3px;
-      width: 40%;
+      max-width: 530px;
       padding-left: 100px;
     }
   }
   
   .primary-button {
     justify-self: start;
+  }
+  
+  @media (max-width: vars.$tab-width) {
+    & {
+      padding-block: 100px;
+      
+      &__content {
+        &-title {
+          font-size: 32px;
+        }
+
+        &-descr {
+          font-size: 14px;
+          margin-bottom: 60px;
+          padding-left: 60px;
+          max-width: 460px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: vars.$mob-width) {
+    & {
+      padding-block: 70px;
+
+      &__content {
+        &-title {
+          font-size: 28px;
+        }
+
+        &-descr {
+          font-size: 14px;
+          margin-bottom: 40px;
+          padding-inline: 40px;
+          max-width: 400px;
+        }
+      }
+
+      .primary-button {
+        justify-self: start;
+        margin-left: 40px;
+      }
+    }
   }
 }

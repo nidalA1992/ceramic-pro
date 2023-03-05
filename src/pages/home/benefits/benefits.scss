@@ -1,4 +1,5 @@
 @use 'src/styles/mixins';
+@use 'src/styles/vars';
 
 @use './slider/benefits-slider';
 
@@ -7,6 +8,7 @@
   
   &__container {
     @include mixins.flex;
+    gap: 5px;
   }
   
   &__right {
@@ -35,11 +37,41 @@
       height: 7px;
       margin: 2px;
       flex: 0 0 auto;
-      
     }
 
     .splide__pagination__page.is-active {
       background-color: black;
+    }
+  }
+  
+  @media (max-width: vars.$tab-width) {
+    & {
+      &__container {
+        flex-direction: column;
+        gap: 50px;
+      }
+      &__descr {
+        padding-left: 50px;
+        max-width: 80%;
+      }
+    }
+  }
+  @media (max-width: vars.$mob-width) {
+    & {
+      &__container {
+        gap: 20px;
+      }
+      
+      &__title {
+        max-width: 85%;
+      }
+      &__descr {
+        display: none;
+      }
+
+      &__right {
+        max-width: 100%;
+      }
     }
   }
   

@@ -1,3 +1,8 @@
+$desc-width-s: 1120px;
+$tab-width: 900px;
+$tab-width-l: 768px;
+$mob-width: 600px;
+
 :root {
   --main-pink: #EC1D91;
   
@@ -18,5 +23,10 @@
   --tr-tf: ease-in;
   
   --section-offset: 80px;
-  --section-title-offset: 80px;
+  --section-title-offset: calc(var(--section-offset) / 1.8);
+  
+  @media (max-width: $tab-width) {
+    --section-offset: 50px;
+  }
+  
 }

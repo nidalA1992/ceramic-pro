@@ -33,7 +33,7 @@ const options = {
   easing: "ease-in-out",
   drag: "free",
   snap: true,
-  autoplay: true,
+  // autoplay: true,
   interval: 3500,
   resetProgress: false,
   updateOnMove: true,
@@ -57,5 +57,21 @@ new Select('.select-lang').init();
 
 new Splide(".hero", options).mount();
 new Splide(".directions", options2).mount();
-new Splide(".products-slider", {...options2, perPage: 3, width: "80%"}).mount();
+new Splide(".products-slider", {
+  ...options2, 
+  perPage: 3, 
+  width: "80%", 
+  fixedWidth: "33%",
+  breakpoints: {
+    900: {
+      perPage: 2,
+      fixedWidth: "50%",
+    },
+    600: {
+      perPage: 1,
+      width: "100%",
+      fixedWidth: "100%",
+    },
+  }
+}).mount();
 new Splide(".benefits-slider", options).mount();

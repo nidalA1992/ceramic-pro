@@ -1,23 +1,33 @@
 @use 'src/styles/mixins';
+@use 'src/styles/vars';
 
 .feedback__content {
   flex-basis: 50%;
-  $mb: 25px;
-  padding-top: 50px;
-  padding-right: 150px;
+  padding: 50px 0 50px 0;
+  margin-right: auto;
+  
+  --mb: 25px;
   
   &-title {
-    @include mixins.font(36px, 600, null, var(--white));
-    margin-bottom: $mb;
+    @include mixins.font(var(--title), 600, null, var(--white));
+    margin-bottom: var(--mb);
   }
   
   &-subtitle {
-    @include mixins.font(22px, 600, null, var(--main-pink));
-    margin-bottom: $mb;
+    @include mixins.font(var(--subtitle), 600, null, var(--main-pink));
+    margin-bottom: var(--mb);
     text-transform: uppercase;
   }
   
   &-descr {
-    @include mixins.font(18px, 400, null, var(--white));
+    @include mixins.font(var(--descr), 400, null, var(--white));
+  }
+  
+  @media (max-width: vars.$tab-width-l) {
+    & {
+      --mb: 20px;
+      
+      padding: 35px 50px 0;
+    }
   }
 }

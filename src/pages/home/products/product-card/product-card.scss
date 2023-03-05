@@ -1,10 +1,11 @@
 @use 'src/styles/mixins';
+@use 'src/styles/vars';
 
 .product-card {
   @include mixins.flex(center, center, column);
   position: relative;
   
-  $mb: 20px;
+  --mb: 20px;
   
   cursor: pointer;
   
@@ -12,7 +13,6 @@
     img {
       scale: 1.05;
     }
-    
     a {
       color: var(--main-pink);
     }
@@ -20,14 +20,15 @@
   
   &__img {
     display: inline-block;
-    margin-bottom: $mb;
+    margin-bottom: var(--mb);
     transition: scale var(--tr-dur) var(--tr-tf);
-
+    height: 277px;
   }
   
   &__name {
     font-size: 16px;
-    margin-bottom: $mb;
+    margin-bottom: var(--mb);
+    text-align: center;
   }
   
   &__link {
@@ -37,4 +38,19 @@
       inset: 0;
     }
   }
+  
+  @media (max-width: vars.$tab-width) {
+    & {
+      --mb: 10px;
+      &__img {
+        height: 210px;
+        
+      }
+      
+      &__name {
+        font-size: 14px;
+      }
+    }
+  }
+  
 }

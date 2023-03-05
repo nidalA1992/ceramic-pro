@@ -2,6 +2,8 @@
 @use 'slide-two/slide-two';
 @use 'slide-three/slide-three';
 
+@use 'src/styles/vars';
+
 .hero {
   padding-top: 150px;
   background: var(--black-white-gradient);
@@ -13,5 +15,27 @@
     .is-active {
       background-color: var(--main-pink);
     }
+  }
+  
+  --title: 45px;
+  --descr: 25px;
+  --digit: 120px;
+  
+  @media (max-width: vars.$tab-width) {
+    --title: 38px;
+    --descr: 20px;
+    --digit: 100px;
+  }
+
+  @media (max-width: vars.$mob-width) {
+    --title: 28px;
+    --descr: 18px;
+    --digit: 80px;
+  }
+}
+
+@media (max-width: vars.$mob-width) {
+  .hero {
+    padding-top: 110px;
   }
 }

@@ -1,13 +1,12 @@
-
-
 mixin nav(className)
   nav(class=className + '__nav')
     ul(class=className + '__nav-list')
       - const items = [
+      -  {href: '#', label: 'ION'},
       -  {href: '#', label: 'О нас'},
+      -  {href: '#', label: 'Карта'},
       -  {href: '#', label: 'Новости'},
       -  {href: '#', label: 'Компания'},
-      -  {href: '#', label: 'Карта'},
       -  {href: '#', label: 'Продукция'},
       -  {href: '#', label: 'Сертификаты'},
       - ];

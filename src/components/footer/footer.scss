@@ -1,4 +1,6 @@
 @use 'src/styles/mixins';
+@use 'src/styles/vars';
+
 .footer {
   background: var(--black-white-gradient);
 
@@ -12,7 +14,7 @@
     &-list {
       @include mixins.flex(null, null, column, wrap);
       max-height: 150px;
-      column-gap: 150px;
+      column-gap: 80px;
     }
     &-item {
       &-link {
@@ -33,7 +35,30 @@
     margin-bottom: 20px;
   }
   
-  //.socials {
-  //  flex-direction: column;
-  //}
+  @media (max-width: vars.$tab-width) {
+    & {
+      &__nav {
+        &-list {
+          max-height: none;
+        }
+        &-item {
+          &-link {
+            line-height: 2;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: vars.$mob-width) {
+    & {
+      &__logo-wrapper {
+        @include mixins.flex(center, center, column)
+      }
+      
+      .logo {
+        width: 50px;
+      }
+    }
+  }
 }

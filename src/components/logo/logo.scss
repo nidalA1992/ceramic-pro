@@ -1,0 +1,15 @@
+@use 'src/styles/vars';
+
+#logo-icon {
+  display: none;
+}
+
+@media (max-width: vars.$mob-width) {
+  #logo-text {
+    display: none;
+  }
+  
+  #logo-icon {
+    display: initial;
+  }
+}

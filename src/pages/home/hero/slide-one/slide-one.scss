@@ -1,4 +1,5 @@
 @use 'src/styles/mixins';
+@use 'src/styles/vars';
 
 .slide-one {
   $mb: 20px;
@@ -6,23 +7,70 @@
   padding-bottom: 75px;
 
   background-image: url("../../assets/hero-slide-1.png");
-  background-position: right;
+  background-position: right bottom;
   background-repeat: no-repeat;
+  background-size: contain;
   
   &__title {
-    @include mixins.font(45px, 600, 1.3, white);
+    @include mixins.font(var(--title), 600, 1.3, white);
     max-width: 670px;
     margin-bottom: $mb;
     letter-spacing: 2px;
   }
   
+  &__title--mob {
+    display: none;
+  }
+  
   &__descr {
-    @include mixins.font(25px, 300, null, white);
+    @include mixins.font(var(--descr), 300, null, white);
     letter-spacing: 1px;
     margin-bottom: calc($mb * 2);
   }
   
   button {
     margin-bottom: calc($mb * 3);
+  }
+}
+
+@media (max-width: vars.$tab-width) {
+  .slide-one {
+    padding-top: 0;
+    padding-bottom: 300px;
+    background-size: 70%;
+
+    &__title {
+      display: none;
+    }
+
+    &__title--mob {
+      display: block;
+      max-width: 400px;
+    }
+
+    &__descr {
+      max-width: 300px;
+    }
+
+  }
+}
+
+@media (max-width: vars.$mob-width) {
+  .slide-one {
+    background-image: url("../../assets/hero-slide-mob-1.png");
+    padding-bottom: 70px;
+    background-size: contain;
+
+    &__title--mob {
+      max-width: 300px;
+    }
+    
+    &__descr {
+      max-width: 280px;
+    }
+    
+    .socials {
+      display: none;
+    }
   }
 }

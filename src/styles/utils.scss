@@ -1,4 +1,5 @@
 @use 'src/styles/mixins';
+@use 'src/styles/vars';
 
 .section-wrapper {
   display: grid;
@@ -29,6 +30,18 @@
 
   span {
     color: var(--main-pink);
+  }
+  
+  @media (max-width: vars.$tab-width) {
+    & {
+      font-size: 36px;
+    }
+  }
+
+  @media (max-width: vars.$mob-width) {
+    & {
+      font-size: 32px;
+    }
   }
 }
 
@@ -79,6 +92,12 @@
   &:hover {
     span {
       translate: 0;
+    }
+  }
+  
+  @media (max-width: vars.$mob-width) {
+    & {
+      font-size: 14px;
     }
   }
 }

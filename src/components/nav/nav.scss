@@ -1,0 +1,30 @@
+@use 'src/styles/mixins';
+@use 'src/styles/vars';
+
+.header__nav {
+  &-list {
+    @include mixins.flex(space-evenly);
+    @include mixins.font(12px, 300, null, var(--white));
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  &-item {
+    
+    &:first-child {
+      @include mixins.font(null, 400, null, var(--main-pink));
+    }
+    
+    border-bottom: 1px solid transparent;
+    transition: border-color 200ms ease-in;
+    &:is(:hover, :active) {
+      border-color: var(--mid-grey);
+      color: white;
+    }
+  }
+}
+
+@media (max-width: vars.$tab-width) {
+  .header__nav {
+    display: none;
+  }
+}

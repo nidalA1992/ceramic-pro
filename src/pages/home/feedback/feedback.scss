@@ -1,5 +1,6 @@
 @use 'src/components/form/form';
 @use 'src/styles/mixins';
+@use 'src/styles/vars';
 @use 'content/content';
 
 .feedback {
@@ -8,12 +9,49 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  
   &__container {
     @include mixins.flex(space-between);
     background-color: rgba(0, 0, 0, 0.5);
+    gap: 50px;
     
     & > form {
       flex-basis: 40%;
     }
+  }
+  
+  --title: 36px;
+  --subtitle: 22px;
+  --descr: 18px;
+  
+  @media (max-width: vars.$tab-width) {
+    & {
+      &__container {
+        gap: 0;
+      }
+    }
+    --title: 28px;
+    --subtitle: 18px;
+    --descr: 16px;
+  }
+  
+  @media (max-width: vars.$tab-width-l) {
+    & {
+      padding-block: 90px;
+      &__container {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  @media (max-width: vars.$mob-width) {
+    & {
+      padding-block: 70px;
+      background-image: url("../../assets/feedback-form-mob.png");
+    }
+    
+    --title: 20px;
+    --subtitle: 16px;
+    --descr: 14px;
   }
 }

@@ -1,4 +1,5 @@
 @use 'src/styles/mixins';
+@use 'src/styles/vars';
 
 .benefits-slide.splide__slide {
   position: relative;
@@ -11,6 +12,7 @@
     position: absolute;
     top: 0;
     z-index: -1;
+    height: 158px;
   }
   
   .title {
@@ -26,5 +28,17 @@
     font-size: 14px;
     max-width: 70%;
     margin-left: auto;
+  }
+  
+  @media (max-width: vars.$mob-width) {
+    & {
+      .image {
+        height: 120px;
+      }
+      
+      .title {
+        padding-left: 0;
+      }
+    }
   }
 }

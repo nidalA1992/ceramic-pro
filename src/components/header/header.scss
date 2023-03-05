@@ -1,9 +1,18 @@
 @use 'src/styles/mixins';
+@use 'src/styles/vars';
+
 @use "select-lang/index";
+
+@use '../nav/nav';
 
 .header {
   position: absolute;
   z-index: 100;
+  
+  &__burger-button {
+    display: none;
+  }
+  
   &__top {
     @include mixins.flex(null, center);
     padding-block: 15px;
@@ -32,23 +41,36 @@
   hr {
     margin-bottom: 20px;
   }
-  
-  &__nav {
-    
-    &-list {
-      @include mixins.flex(space-evenly);
-      @include mixins.font(12px, 300, null, var(--white));
-      letter-spacing: 2px;
-      text-transform: uppercase;
+}
+
+@media (max-width: vars.$tab-width) {
+  .header {
+    &__connect-button {
+      display: none;
     }
-    &-item {
-      border-bottom: 1px solid transparent;
-      transition: border-color 200ms ease-in;
-      &:is(:hover, :active) {
-        border-color: var(--mid-grey);
-        color: white;
-      }
+    
+    &__burger-button {
+      display: block;
     }
   }
-  
+}
+
+@media (max-width: vars.$mob-width) {
+  .header {
+    &__burger-button {
+      margin-left: auto;
+    }
+    
+    .logo {
+      height: 30px;
+    }
+    
+    hr {
+      display: none;
+    }
+    
+    .select-lang {
+      display: none;
+    }
+  }
 }
