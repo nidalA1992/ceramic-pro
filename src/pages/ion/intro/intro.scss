@@ -3,7 +3,6 @@
 
 .intro {
   padding-block: var(--section-offset);
-  grid-template-columns: 1fr min(60ch, 100% - 64px) 1fr;
 
   &__title {
     margin-bottom: var(--section-title-offset);
@@ -13,12 +12,5 @@
     }
   }
   
-  &__descr {
-    @include mixins.font(null, 300, 1.2, var(--mid-grey));
-    
-    span {
-      color: var(--main-pink);
-      font-weight: 500;
-    }
-  }
+  
 }

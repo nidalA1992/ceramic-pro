@@ -2,7 +2,7 @@
 @use 'src/styles/vars';
 
 .news__article-item {
-  @include mixins.flex(null, null, null, wrap);
+  @include mixins.flex(null, null, column, wrap);
   gap: 5px;
   position: relative;
   background-position: center;
