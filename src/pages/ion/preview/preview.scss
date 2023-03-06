@@ -1,15 +1,11 @@
 .preview {
   background-color: black;
-  padding-block: var(--section-offset);
+  padding-top: var(--section-offset);
+  padding-bottom: var(--section-title-offset);
   
   &__title {
     margin-bottom: var(--section-title-offset);
     color: var(--white);
-    text-align: center;
-  }
-  
-  &__subtitle {
-    margin-bottom: var(--section-title-offset);
     text-align: center;
   }
   
@@ -23,9 +19,6 @@
   }
   
   &__text {
-    color: var(--grey80);
-    &:not(:last-child) {
-      margin-bottom: var(--section-title-offset);
-    }
+    color: var(--grey66);
   }
 }

@@ -1,0 +1,60 @@
+@use 'src/styles/mixins';
+@use 'src/styles/vars';
+@use 'text-card/text-card';
+
+.information {
+  padding-bottom: var(--section-offset);
+  
+  &__title {
+    margin-bottom: var(--section-offset);
+    text-align: center;
+    @include mixins.font(30px, 400, null, var(--main-pink));
+    
+    @media (max-width: vars.$mob-width) {
+      & {
+        font-size: 26px;
+      }
+    }
+  }
+  
+  &__list {
+    @include mixins.flex(center, null, null, wrap);
+    margin-bottom: var(--section-title-offset);
+    column-gap: 70px;
+    row-gap: 30px;
+  }
+  
+  &__schema-wrapper {
+    gap: var(--section-title-offset);
+    //column-gap: 20px;
+    //row-gap: 30px;
+    margin-bottom: var(--section-title-offset);
+    @include mixins.flex(center, center, null, wrap);
+    
+    & > *:first-child {
+      margin-right: auto;
+    }
+
+    & > *:last-child {
+      margin-left: auto;
+    }
+  }
+  
+  &__schema {
+    flex: 0 1 48%;
+    min-height: 224px;
+    display: inline-block;
+    
+    @media (max-width: vars.$mob-width) {
+      & {
+        min-height: 160px;
+      }
+    }
+  }
+  
+  &__descr {
+    margin-inline: auto;
+    width: 65ch;
+  }
+  
+}

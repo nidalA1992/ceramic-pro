@@ -1,0 +1,6 @@
+mixin product(img, title, descr)
+  li.product
+    img.product__img(src= img, alt="Изображение товара")
+    div.product__content
+      h3.product__title !{title}
+      p.product__descr.text !{descr}

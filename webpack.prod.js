@@ -8,22 +8,24 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: [
            MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           'sass-loader',
         ],
-      },
+      },  
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css',
+
     }),
   ],
   optimization: {
+    minimize: false,
     minimizer: [
       "...",
       new ImageMinimizerPlugin({

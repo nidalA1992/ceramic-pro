@@ -1,0 +1,17 @@
+@use 'src/styles/mixins';
+
+.text-card {
+  @include mixins.flex(null, center, column);
+  flex: 1 1 40ch;
+  
+  &__title {
+    max-width: 547px;
+    color: var(--main-pink);
+    margin-bottom: calc(var(--section-title-offset) / 2);
+  }
+  
+  &__text {
+    max-width: 547px;
+    text-align: justify;
+  }
+}

@@ -3,7 +3,7 @@
 
 .section-wrapper {
   display: grid;
-  grid-template-columns: 1fr min(1325px, calc(100% - 64px)) 1fr;
+  grid-template-columns: 1fr min(1125px, calc(100% - 64px)) 1fr;
   grid-column-gap: 32px;
   width: 100%;
   
@@ -111,7 +111,6 @@
       font-size: 12px;
       padding: 10px 30px;
       border: none;
-      
       background-color: var(--main-pink);
 
       &::before, &::after {
@@ -137,7 +136,7 @@
 }
 
 .text {
-  @include mixins.font(null, 300, 1.2, var(--mid-grey));
+  @include mixins.font(null, 300, 1.3, var(--mid-grey));
   letter-spacing: 0.5px;
   span {
     color: var(--main-pink);

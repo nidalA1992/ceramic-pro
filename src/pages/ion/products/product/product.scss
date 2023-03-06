@@ -1,0 +1,45 @@
+@use 'src/styles/mixins';
+@use 'src/styles/vars';
+
+.product {
+  @include mixins.flex(space-around);
+  
+  &__img {
+    width: 132px;
+    height: 320px;
+  }
+  
+  &__title {
+    @include mixins.font(32px);
+    margin-bottom: calc(var(--section-title-offset) / 2);
+   
+    span {
+      color: var(--main-pink);
+    }
+  }
+  
+  &__content {
+    @include mixins.flex(center, null, column);
+  }
+  
+  &__descr {
+    max-width: 65ch;
+  }
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 1px;
+  }
+  
+  @media (max-width: vars.$mob-width) {
+    & {
+      flex-direction: column !important;
+      align-items: center;
+      
+      &__img {
+        margin-bottom: var(--section-title-offset);
+      }
+    }
+  }
+}

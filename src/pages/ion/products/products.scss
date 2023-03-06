@@ -1,0 +1,27 @@
+@use 'product/product';
+
+.products {
+  &__top {
+    background-color: black;
+    padding-bottom: var(--section-title-offset);
+  }
+  
+  &__bottom {
+    padding-top: var(--section-title-offset);
+    padding-bottom: var(--section-offset);
+  }
+  
+  &__title {
+    text-align: center;
+    margin-bottom: var(--section-title-offset);
+  }
+  
+  &__descr {
+    color: var(--grey66);
+  }
+  
+  li:not(:last-child) {
+    margin-bottom: var(--section-title-offset);
+    flex-direction: row-reverse;
+  }
+}
