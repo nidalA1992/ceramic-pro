@@ -31,12 +31,4 @@
       }
     }
   }
-
-  @media (max-width: vars.$mob-width) {
-    & {
-      &-link {
-        height: 30px;
-      }
-    }
-  }
 }

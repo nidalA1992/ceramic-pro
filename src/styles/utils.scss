@@ -124,6 +124,24 @@
   }
 }
 
+.pink-button {
+  padding: 20px 40px;
+  background-color: var(--main-pink);
+  color: var(--white);
+  white-space: nowrap;
+  
+  &:hover {
+    filter: brightness(0.9);
+  }
+  
+  @media (max-width: vars.$mob-width) {
+    & {
+      font-size: 12px;
+      padding: 10px 30px;
+    }
+  }
+}
+
 .arrow-link {
   @include mixins.flex(null, center);
   transition: color var(--tr-dur) var(--tr-tf);

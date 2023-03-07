@@ -1,0 +1,44 @@
+@use 'src/styles/mixins';
+
+.ion-benefits {
+  position: relative;
+  padding-block: var(--section-offset);
+  background-color: var(--black);
+  
+  &__title {
+    color: var(--white);
+    margin-bottom: var(--section-title-offset);
+    max-width: 500px;
+  }
+  
+  &__list {
+    @include mixins.flex(null, null, null, wrap);
+    column-gap: 70px;
+    row-gap: 30px;
+  }
+  
+  .text-card {
+    &__title {
+      color: var(--white);
+      font-weight: 400;
+    }
+    
+    &__text {
+      color: var(--grey66);
+    }
+  }
+  
+  &__triangle {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-image: url("../../assets/polygon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 25vw;
+    max-height: 400px;
+    min-height: 175px;
+    z-index: -1;
+  }
+}

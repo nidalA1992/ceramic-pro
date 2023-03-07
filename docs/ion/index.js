@@ -82,7 +82,7 @@ var Select = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ 508:
+/***/ 76:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 
@@ -100,6 +100,14 @@ const ion_top_coat_namespaceObject = __webpack_require__.p + "images/ion-top-coa
 const ceramic_pro_ion_schema_namespaceObject = __webpack_require__.p + "images/ceramic-pro-ion-schema.png";
 ;// CONCATENATED MODULE: ./src/assets/ceramic-pro-9h-schema.png
 const ceramic_pro_9h_schema_namespaceObject = __webpack_require__.p + "images/ceramic-pro-9h-schema.png";
+;// CONCATENATED MODULE: ./src/assets/polygon.png
+const polygon_namespaceObject = __webpack_require__.p + "images/polygon.png";
+;// CONCATENATED MODULE: ./src/assets/black-logo.png
+const black_logo_namespaceObject = __webpack_require__.p + "images/black-logo.png";
+;// CONCATENATED MODULE: ./src/assets/ion-banner.png
+const ion_banner_namespaceObject = __webpack_require__.p + "images/ion-banner.png";
+;// CONCATENATED MODULE: ./src/assets/ion-footer-banner.png
+const ion_footer_banner_namespaceObject = __webpack_require__.p + "images/ion-footer-banner.png";
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(379);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
@@ -157,7 +165,11 @@ var update = injectStylesIntoStyleTag_default()(ion/* default */.Z, options);
 
 
 
-var img = [ion_hero_namespaceObject, ion_hero_back_namespaceObject, ion_base_coat_namespaceObject, ion_top_coat_namespaceObject, ceramic_pro_ion_schema_namespaceObject, ceramic_pro_9h_schema_namespaceObject];
+
+
+
+
+var img = [ion_hero_namespaceObject, ion_hero_back_namespaceObject, ion_base_coat_namespaceObject, ion_top_coat_namespaceObject, ceramic_pro_ion_schema_namespaceObject, ceramic_pro_9h_schema_namespaceObject, polygon_namespaceObject, black_logo_namespaceObject, ion_banner_namespaceObject, ion_footer_banner_namespaceObject];
 img.length = 0;
 
 new lib_select/* Select */.P('.select-lang').init();
@@ -189,7 +201,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, [216], () => (__webpack_exec__(508)));
+/******/ __webpack_require__.O(0, [216], () => (__webpack_exec__(76)));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);

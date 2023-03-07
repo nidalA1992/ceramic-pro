@@ -1,7 +1,13 @@
 @use 'src/styles/index';
 
+@use 'src/components/label-socials/label-socials';
+@use 'src/components/label-links/label-links';
+
 @use 'hero/hero';
 @use 'intro/intro';
 @use 'preview/preview';
 @use 'products/products';
 @use 'information/informations';
+@use 'ion-benefits/ion-benefits';
+@use 'banner/banner';
+@use 'footer-banner/footer-banner';
