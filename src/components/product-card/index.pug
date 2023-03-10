@@ -1,0 +1,6 @@
+mixin product(img, name, url)
+  li.splide__slide.product-card
+    img(src=img, alt=name + ' image', class="product-card__img")
+    h3.product-card__name= name
+    a.product-card__link.arrow-link(href= url) Подробнее
+  

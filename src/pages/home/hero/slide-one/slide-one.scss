@@ -3,13 +3,13 @@
 
 .slide-one {
   $mb: 20px;
-  padding-top: 75px;
-  padding-bottom: 75px;
+  padding-block: 150px;
+
 
   background-image: url("../../assets/hero-slide-1.png");
   background-position: right bottom;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   
   &__title {
     @include mixins.font(var(--title), 600, 1.3, white);
@@ -35,9 +35,10 @@
 
 @media (max-width: vars.$tab-width) {
   .slide-one {
-    padding-top: 0;
-    padding-bottom: 300px;
-    background-size: 70%;
+    padding-block: 80px;
+    // padding-top: 0;
+    // padding-bottom: 300px;
+    // background-size: 70%;
 
     &__title {
       display: none;
@@ -57,9 +58,9 @@
 
 @media (max-width: vars.$mob-width) {
   .slide-one {
-    background-image: url("../../assets/hero-slide-mob-1.png");
-    padding-bottom: 70px;
-    background-size: contain;
+    // background-image: url("../../assets/hero-slide-mob-1.png");
+    // padding-bottom: 70px;
+    // background-size: contain;
 
     &__title--mob {
       max-width: 300px;

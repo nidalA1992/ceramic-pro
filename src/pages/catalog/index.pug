@@ -1,0 +1,26 @@
+extends ../../components/base-template
+include ../../components/product-card/index
+
+block title 
+  title Ceramic-Pro
+block content
+
+  -const products = [
+  -   {name: "Ceramic Pro ION Base Coat", img: "images/product-1.png", url: "/catalog/productID"},
+  -   {name: "Ceramic Pro IOS Top Coat", img: "images/product-1.png", url: "/catalog/productID"},
+  -   {name: "Ceramic Pro 9A", img: "images/product-1.png", url: "/catalog/productID"},
+  -   {name: "Ceramic Pro ION Base Coat", img: "images/product-1.png", url: "/catalog/productID"},
+  -   {name: "Ceramic Pro IOS Top Coat", img: "images/product-1.png", url: "/catalog/productID"},
+  -   {name: "Ceramic Pro IOS Top Coat", img: "images/product-1.png", url: "/catalog/productID"},
+  -   {name: "Ceramic Pro IOS Top Coat", img: "images/product-1.png", url: "/catalog/productID"},
+  -   {name: "Ceramic Pro 9A", img: "images/product-1.png", url: "/catalog/productID"}
+  -];
+
+  section.products.section-wrapper 
+    div.products__container
+      h2.products__title.section-title Каталог
+      ul.products__list 
+        each product in products
+          +product(product.img, product.name, product.url)
+        li(style={width: '300px'})
+        li(style={width: '300px'})

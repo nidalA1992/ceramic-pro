@@ -1,0 +1,30 @@
+@use 'src/styles/mixins';
+@use "src/styles/index.scss";
+
+@use "src/components/product-card/product-card";
+
+.products {
+  padding-top: var(--section-offset);
+
+  &__title {
+    margin-bottom: var(--section-title-offset);
+  }
+
+  &__list {
+    @include mixins.flex(space-evenly, null, null, wrap);
+    column-gap: 70px;
+    row-gap: 50px;
+    
+    .product-card {
+      flex: 0 0 300px;
+    }
+  }
+}
+
+// @media (max-width: 900px) {
+//   .products {
+//     &__list {
+//       justify-content: space-around;
+//     }
+//   }
+// }

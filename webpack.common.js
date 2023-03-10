@@ -1,26 +1,23 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    home: path.resolve(__dirname, 'src', 'pages', 'home', 'index.js'),
-    ion: path.resolve(__dirname, 'src', 'pages','ion', 'index.js'),
+    home: path.resolve(__dirname, "src", "pages", "home", "index.js"),
+    ion: path.resolve(__dirname, "src", "pages", "ion", "index.js"),
+    catalog: path.resolve(__dirname, "src", "pages", "catalog", "index.js"),
   },
   output: {
-    filename: '[name]/index.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "[name]/index.js",
+    path: path.resolve(__dirname, "dist"),
     clean: true,
-    assetModuleFilename: 'images/[name][ext]',
+    assetModuleFilename: "images/[name][ext]",
   },
   module: {
     rules: [
       {
         test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.js$/,
@@ -29,7 +26,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
       {
         test: /\.pug$/,
@@ -38,36 +35,43 @@ module.exports = {
           pretty: true,
         },
       },
-    ]
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'home',
+      title: "home",
       template: path.join(__dirname, "src", "pages", "home", "index.pug"),
       filename: "index.html",
       chunks: ["home"],
       minify: false,
     }),
     new HtmlWebpackPlugin({
-      title: 'aboutus',
+      title: "ion",
       template: path.join(__dirname, "src", "pages", "ion", "index.pug"),
       filename: "ion/index.html",
       chunks: ["ion"],
       minify: false,
     }),
+    new HtmlWebpackPlugin({
+      title: "catalog",
+      template: path.join(__dirname, "src", "pages", "catalog", "index.pug"),
+      filename: "catalog/index.html",
+      chunks: ["catalog"],
+      minify: false,
+    }),
   ],
   optimization: {
     usedExports: true,
-    moduleIds: 'deterministic',
-    runtimeChunk: 'single',
+    moduleIds: "deterministic",
+    runtimeChunk: "single",
     splitChunks: {
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all'
-        }
-      }
+          name: "vendors",
+          chunks: "all",
+        },
+      },
     },
   },
 };

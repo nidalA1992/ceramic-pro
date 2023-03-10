@@ -13,9 +13,9 @@
     @include mixins.font(14px, 300, null, var(--mid-grey));
     
     &:is(:hover, :active) {
-      color: white;
+      color: var(--main-pink);
       &::before {
-        color: white;
+        color: var(--main-pink);
       }
     }
     

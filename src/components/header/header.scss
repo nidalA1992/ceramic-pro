@@ -6,19 +6,42 @@
 @use '../nav/nav';
 
 .header {
-  position: absolute;
+  // padding-block: 20px;
+  // position: absolute;
   min-width: 375px;
   z-index: 100;
+  // background-image: url('../../assets/Vector.png');
+  background-color: black;
   
   &__burger-button {
     display: none;
   }
   
   &__top {
+    position: relative;
     @include mixins.flex(null, center);
-    padding-block: 15px;
+    padding-block: 20px;
+    z-index: 100;
+    // margin-bottom: 20px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      height: 100%;
+      right: -50vw;
+      left: -50vw;
+      background: var(--white) url('../../assets/Vector.png');
+      background-repeat: repeat;
+      background-size: contain;
+      z-index: -1;
+    }
   }
-  
+
+  &__bottom {
+    padding-block: 20px;
+  }
+
   .logo {
     svg {
       height: 40px;
@@ -28,20 +51,17 @@
   &__connect-button {
     border: 1px solid var(--mid-grey);
     padding: 5px 30px;
-    color: var(--white);
+    color: var(--black);
     transition: mixins.transition(var(--tr-dur), var(--tr-tf), color, background-color);
     font-weight: 100;
     white-space: nowrap;
     
     &:is(:hover, :active) {
-      background-color: var(--white);
-      color: var(--black);
+      background-color: var(--black);
+      color: var(--white);
     }
   }
-  
-  hr {
-    margin-bottom: 20px;
-  }
+
 }
 
 @media (max-width: vars.$tab-width) {
@@ -49,9 +69,17 @@
     &__connect-button {
       display: none;
     }
+
+    &__bottom {
+      display: none;
+    }
     
     &__burger-button {
       display: block;
+    }
+
+    hr {
+      display: none;
     }
   }
 }

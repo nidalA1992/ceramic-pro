@@ -5,7 +5,7 @@
 
 .feedback {
   padding-block: 130px;
-  background-image: url("../../assets/feedback-form.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/feedback-form.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -47,7 +47,6 @@
   @media (max-width: vars.$mob-width) {
     & {
       padding-block: 70px;
-      background-image: url("../../assets/feedback-form-mob.png");
     }
     
     --title: 20px;

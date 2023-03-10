@@ -2,6 +2,7 @@
 @use "src/styles/index.scss";
 
 @use "src/components/label-links/label-links";
+@use "src/components/feedback/feedback";
 
 @use "about-us/about-us";
 @use "hero/hero-slider";
@@ -11,5 +12,4 @@
 @use "benefits/benefits";
 @use "src/components/label-socials/label-socials";
 @use "news/news";
-@use "feedback/feedback";
 

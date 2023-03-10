@@ -1,6 +1,6 @@
 @use 'src/styles/mixins';
 @use 'src/styles/vars';
-@use './product-card/product-card';
+@use 'src/components/product-card/product-card';
 
 .products {
   position: relative;
