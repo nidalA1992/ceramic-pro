@@ -1,6 +1,6 @@
 @use "src/styles/mixins";
 @use "src/styles/vars";
-@use "benefit-text-card/benefit-text-card";
+@use "src/components/benefit-text-card/benefit-text-card";
 
 .benefits {
   padding-block: var(--section-offset);

@@ -1,0 +1,56 @@
+@use "src/styles/mixins";
+@use "src/styles/vars";
+
+.hero {
+  height: 100vh;
+  padding-top: calc(var(--section-offset) * 2);
+  
+  background: radial-gradient(rgba(0, 0, 0, 0.2), var(--black)), url("../../assets/avto-moto-banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  &__title {
+    @include mixins.font(60px, 500, null, var(--white));
+    margin-bottom: var(--section-title-offset);
+  }
+  
+  &__descr {
+    @include mixins.font(20px, null, 1.5, var(--white));
+    max-width: 670px;
+  }
+}
+
+@media (max-width: vars.$tab-width) {
+  .hero {
+    padding: 0;
+    &__container {
+      @include mixins.flex(center, null, column);
+    }
+    
+    &__title {
+      font-size: 45px;
+    }
+    
+    &__descr {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: vars.$mob-width) {
+  .hero {
+    
+    height: 70vh;
+    &__container {
+      //padding: 0;
+    }
+    
+    &__title {
+      font-size: 36px;
+    }
+    &__descr {
+      font-size: 16px;
+    }
+  }
+}

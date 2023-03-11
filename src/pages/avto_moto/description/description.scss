@@ -1,0 +1,11 @@
+.description {
+  padding-block: var(--section-offset);
+  
+  &__container {}
+  
+  &__title {
+    margin-bottom: var(--section-title-offset);
+  }
+  
+  &__text {}
+}

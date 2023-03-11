@@ -2,12 +2,12 @@ import { Splide } from "@splidejs/splide";
 
 import { Select } from "../../lib/select";
 
-import slide_1 from "../../assets/dir-slide-1.png";
-import slide_2 from "../../assets/dir-slide-2.png";
-import slide_3 from "../../assets/dir-slide-3.png";
-import slide_4 from "../../assets/dir-slide-4.png";
-import slide_5 from "../../assets/dir-slide-5.png";
-import slide_6 from "../../assets/dir-slide-6.png";
+import slide_1 from "../../assets/avto-moto-banner.png";
+import slide_2 from "../../assets/avia-banner.png";
+import slide_3 from "../../assets/gidro-banner.png";
+import slide_4 from "../../assets/clothes-banner.png";
+import slide_5 from "../../assets/offices-banner.png";
+import slide_6 from "../../assets/homes-banner.png";
 import product_1 from "../../assets/product-1.png";
 import iso from "../../assets/iso-img.png";
 import light_on from "../../assets/light-on.png";

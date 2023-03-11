@@ -8,6 +8,7 @@ module.exports = {
     catalog: path.resolve(__dirname, "src", "pages", "catalog", "index.js"),
     product: path.resolve(__dirname, "src", "pages", "product", "index.js"),
     areas: path.resolve(__dirname, "src", "pages", "areas", "index.js"),
+    avto_moto: path.resolve(__dirname, "src", "pages", "avto_moto", "index.js"),
   },
   output: {
     filename: "[name]/index.js",
@@ -73,6 +74,13 @@ module.exports = {
       template: path.join(__dirname, "src", "pages", "areas", "index.pug"),
       filename: "areas/index.html",
       chunks: ["areas"],  
+      minify: false,
+    }),
+    new HtmlWebpackPlugin({
+      title: "avto_moto",
+      template: path.join(__dirname, "src", "pages", "avto_moto", "index.pug"),
+      filename: "areas/avto_moto/index.html",
+      chunks: ["avto_moto"],
       minify: false,
     }),
   ],
