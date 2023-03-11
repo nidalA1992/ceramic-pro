@@ -1,0 +1,48 @@
+@use "src/styles/mixins";
+@use "src/styles/vars";
+
+.areas {
+  padding-block: var(--section-offset);
+  
+  &__title {
+    margin-bottom: var(--section-title-offset);
+  }
+  
+  &__list {
+    column-count: 2;
+    //@include mixins.flex(space-between, null, row, wrap);
+    column-gap: 50px;
+    
+    & li:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: vars.$tab-width) {
+  .areas {
+    
+    &__list {
+      column-count: initial;
+    }
+  }
+}
+
+@media (max-width: vars.$mob-width) {
+  .areas {
+    
+    &__title {
+      text-align: center;
+    }
+    &__list {
+      li {
+        margin-left: -50px;
+        margin-right: -50px;
+        
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

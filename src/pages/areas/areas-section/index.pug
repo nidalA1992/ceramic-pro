@@ -1,0 +1,17 @@
+include area-card/index
+
+-const areas = [
+-   {name: "Авто и <span>мото техника</span>", img: "/images/avto-moto.png", url: "/areas/avto-moto"},
+-   {name: "Авиационная <span>техника</span>", img: "/images/avia.png", url: "/areas/avia"},
+-   {name: "Гидро <span>техника</span>", img: "/images/gidro.png", url: "/areas/gidro"},
+-   {name: "Одежда <span>и обувь</span>", img: "/images/clothes.png", url: "/areas/clothes"},
+-   {name: "Офисы <span>и строения</span>", img: "/images/offices.png", url: "/areas/offices"},
+-   {name: "Дома <span>и квартиры</span>", img: "/images/homes.png", url: "/areas/homes"},
+-];
+
+section.areas.section-wrapper
+  div.areas__container
+    h2.areas__title.section-title Области применения
+    ul.areas__list
+      each area in areas
+        +area-card(area.name, area.img, area.url)

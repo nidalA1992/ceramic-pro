@@ -1,0 +1,75 @@
+@use "src/styles/vars";
+
+.area-card {
+  position: relative;
+  padding-top: 230px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  z-index: 10;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background-image: url("../../assets/logo-white.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 20px;
+    left: 15px;
+    height: 50px;
+    width: 200px;
+  }
+  
+  
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--black);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity var(--tr-dur) var(--tr-tf);
+  }
+  
+  &:has(a:hover)::after {
+    opacity: 0.5;
+  }
+  
+  &:has(a:hover) &__name {
+    color: var(--main-pink);
+  }
+  
+  &__link {
+    position: absolute;
+    inset: 0;
+  }
+  
+  &__name {
+    line-height: 2.5;
+    background-color: var(--white);
+    transition: color var(--tr-dur) var(--tr-tf);
+    span {
+      color: var(--main-pink);
+    }
+  }
+}
+ 
+ @media (max-width: vars.$desc-width-s) {
+   .area-card {
+     background-size: auto;
+     
+     &__name {
+       line-height: 1.5;
+     }
+     
+   }
+ }
+
+@media (max-width: vars.$tab-width) {
+  .area-card {
+    background-size: cover;
+    background-position: top center;
+  }
+}

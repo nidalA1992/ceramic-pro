@@ -9,7 +9,6 @@
     @include mixins.font(25px, 600, null, var(--white));
     white-space: nowrap;
     flex-basis: 30%;
-    color: var(--mid-grey);
     
     transition: color var(--tr-dur) var(--tr-tf);
 
@@ -23,9 +22,8 @@
     }
 
     &:hover {
-      color: var(--white);
       svg path, svg rect {
-        fill: var(--white);
+        fill: var(--mid-grey);
       }
     }
   }

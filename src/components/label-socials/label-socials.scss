@@ -1,9 +1,20 @@
+@use "src/styles/vars";
+
 .label-socials {
   background: var(--black) url('../../assets/Vector-alfa.png');
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
 
   & a {
     background: transparent;
+  }
+  
+  & > div {
+    background: transparent;
+  }
+}
+
+@media (max-width: vars.$desc-width-s) {
+  .label-socials {
+    background-size: contain;
   }
 }

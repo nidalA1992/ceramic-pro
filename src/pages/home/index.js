@@ -15,7 +15,6 @@ import img_70 from "../../assets/70-img.svg";
 import news_1 from "../../assets/news-1.png";
 import news_2 from "../../assets/news-2.png";
 import vector from "../../assets/Vector.png";
-import vector_alfa from "../../assets/Vector-alfa.png";
 import logo from "../../assets/logo.png";
 
 import "./index.scss";
@@ -35,7 +34,6 @@ const imgs = [
   news_2,
   vector,
   logo,
-  vector_alfa,
 ];
 imgs.length = 0;
 

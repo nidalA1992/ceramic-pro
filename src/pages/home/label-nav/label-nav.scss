@@ -1,4 +1,12 @@
+@use "src/styles/vars";
+
 .label-nav {
   background: var(--black) url('../../assets/Vector-alfa.png');
-  background-size: contain;
+  background-size: cover;
+}
+
+@media (max-width: vars.$desc-width-s) {
+  .label-nav {
+    background-size: contain;
+  }
 }
