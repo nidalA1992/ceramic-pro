@@ -28,6 +28,7 @@ dd {
 
 html {
   min-width: 375px;
+  overflow-x: hidden;
 }
 
 body {
@@ -36,8 +37,8 @@ body {
   text-rendering: optimizeSpeed;
   font-family: 'Inter', sans-serif;
   color: var(--black);
-  overflow-x: hidden;
   background-color: var(--background-main);
+  overflow-x: hidden;
 }
 
 ul,

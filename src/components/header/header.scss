@@ -1,16 +1,11 @@
 @use 'src/styles/mixins';
 @use 'src/styles/vars';
-
 @use "select-lang/index";
-
 @use '../nav/nav';
 
 .header {
-  // padding-block: 20px;
-  // position: absolute;
   min-width: 375px;
   z-index: 100;
-  // background-image: url('../../assets/Vector.png');
   background-color: black;
   
   &__burger-button {
@@ -22,7 +17,6 @@
     @include mixins.flex(null, center);
     padding-block: 20px;
     z-index: 100;
-    // margin-bottom: 20px;
 
     &::before {
       content: '';
@@ -86,6 +80,7 @@
 
 @media (max-width: vars.$mob-width) {
   .header {
+    
     &__burger-button {
       margin-left: auto;
     }

@@ -1,5 +1,5 @@
 .preview {
-  background: linear-gradient(#444, black 30%);
+  background-color: var(--black);
   padding-top: var(--section-offset);
   padding-bottom: var(--section-title-offset);
   
@@ -16,6 +16,7 @@
     background-position: center;
     height: 65vw;
     max-height: 600px;
+    margin-bottom: 20px;
   }
   
   &__text {

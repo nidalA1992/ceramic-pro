@@ -1,0 +1,84 @@
+@use "src/styles/mixins";
+@use "src/styles/vars";
+
+.preview {
+  &__back-button {
+    @include mixins.flex(null, center);
+    padding-block: var(--section-title-offset);
+    justify-self: start;
+    transition: color var(--tr-dur) var(--tr-dur);
+    
+    &:hover {
+      color: var(--main-pink);
+    }
+    
+    svg {
+      padding-right: 20px;
+    }
+  }
+  
+  &__container {
+    column-count: 2;
+  }
+  
+  &__product-img {
+    min-height: 400px;
+    max-height: 500px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  &__product-info {
+    @include mixins.flex(null, null, column);
+    row-gap: 30px;
+    max-width: 50ch;
+  }
+  
+  &__product-title {
+    font-size: 26px;
+    font-weight: 400;
+  }
+  
+  &__direction {
+    margin-bottom: 5px;
+  }
+  
+  &__price-button {
+    padding: 1em 5em;
+    align-self: start;
+  }
+}
+
+@media (max-width: vars.$tab-width) {
+  .preview {
+    &__product-title {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: vars.$mob-width) {
+  .preview {
+    &__product-img {
+      margin-bottom: var(--section-title-offset);
+    }
+    
+    &__product-info {
+      margin-inline: auto;
+    }
+    
+    &__container {
+      column-count: initial;
+    }
+    
+    &__price-button {
+      align-self: stretch;
+    }
+    
+    &__product-title {
+      font-size: 22px;
+    }
+  }
+}

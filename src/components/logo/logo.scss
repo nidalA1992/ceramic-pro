@@ -6,20 +6,12 @@
 
 .logo__img {
   display: inline-block;
-  width: 260px;
   height: 50px;
-  background-image: url('../../assets/logo.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  object-fit: contain;
 }
 
 @media (max-width: vars.$mob-width) {
-  // #logo-text {
-  //   display: none;
-  // }
-  
-  // #logo-icon {
-  //   display: initial;
-  // }
+  .logo__img {
+    height: 30px;
+  }
 }

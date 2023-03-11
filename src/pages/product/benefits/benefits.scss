@@ -1,0 +1,60 @@
+@use "src/styles/mixins";
+@use "src/styles/vars";
+@use "benefit-text-card/benefit-text-card";
+
+.benefits {
+  padding-block: var(--section-offset);
+  &__container {
+    @include mixins.flex(space-between, null, row);
+  }
+  
+  &__title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: var(--section-title-offset);
+  }
+  
+  &__img {
+    height: 350px;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  &__wrapper {
+    @include mixins.flex(space-between, null, column);
+    row-gap: 30px;
+  }
+  
+  &__left {
+    text-align: end;
+    
+    .benefit-text-card {
+      &__descr {
+        padding-left: 0;
+        padding-right: 20px;
+        &::before {
+          left: initial;
+          right: 0;
+        }
+      }
+    }
+  } 
+}
+
+@media (max-width: vars.$tab-width) {
+  .benefits {
+    &__container {
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    &__title {
+      font-size: 20px;
+    }
+    
+    &__img {
+      display: none;
+    }
+  }
+}
+

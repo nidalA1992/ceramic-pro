@@ -1,0 +1,24 @@
+include benefit-text-card/index
+
+-const benefits_left = [
+-   {title: "Улучшенная толщина", descr: "Для достижения желаемого эффекта требуется меньше слоев"},
+-   {title: "Химическая устойчивость", descr: "Отсутствие микропор и окисления поверхности после нанесения"},
+-   {title: "Защита от внешней среды", descr: "Улучшеная стойкость к износу и образивному повреждению"},
+-];
+
+-const benefits_right = [
+-   {title: "Выская эстетика", descr: "Превосходный глянец и серкальное покрытие"},
+-   {title: "Высокая плотность", descr: "Удаляется только полировкой"},
+-   {title: "Технологичная формула", descr: "Первый продукт для детейлинга на основе ионнообменной технологии"},
+-];
+
+section.benefits.section-wrapper
+  h2.benefits__title.section-title Почему технология <span>ионного обмена</span> является прорывом в сфере детейлинга?
+  div.benefits__container 
+    div.benefits__left.benefits__wrapper
+      each card in benefits_left
+        +benefit-text-card(card.title, card.descr)
+    img.benefits__img(src="/images/product-1.png")
+    div.benefits__right.benefits__wrapper
+      each card in benefits_right
+        +benefit-text-card(card.title, card.descr)
