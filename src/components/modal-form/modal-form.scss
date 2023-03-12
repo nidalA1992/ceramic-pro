@@ -1,0 +1,19 @@
+@use "src/styles/mixins";
+@use "src/styles/vars";
+
+.modal-form {
+  @include mixins.flex(null, null, column);
+  position: relative;
+  padding: 140px 215px;
+  background-color: var(--white);
+  
+  &__title {}
+  
+  &__input {}
+  
+  &__submit {}
+  
+  &__close-button {
+    position: absolute;
+  }
+}
