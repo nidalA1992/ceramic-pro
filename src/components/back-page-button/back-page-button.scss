@@ -1,0 +1,16 @@
+@use "src/styles/mixins";
+
+.back-page-button {
+  @include mixins.flex(null, center);
+  padding-block: var(--section-title-offset);
+  justify-self: start;
+  transition: color var(--tr-dur) var(--tr-dur);
+
+  &:hover {
+    color: var(--main-pink);
+  }
+
+  svg {
+    padding-right: 20px;
+  }
+}

@@ -1,10 +1,10 @@
-include article/index
+include ../../../components/article-card/index
 
 -const articles = [
--   {title: 'Новая линейка продукции', href: '#', img: 'images/news-1.png'},
--   {title: 'Важная информация для партнеров', href: '#', img: 'images/news-2.png'},
--   {title: 'Новая линейка продукции', href: '#', img: 'images/news-1.png'},
--   {title: 'Важная информация для партнеров', href: '#', img: 'images/news-2.png'},
+-   {title: 'Новая линейка продукции', href: '/news/news-page', img: '/images/news-1.png'},
+-   {title: 'Важная информация для партнеров', href: '/news/news-page', img: '/images/news-2.png'},
+-   {title: 'Новая линейка продукции', href: '/news/news-page', img: '/images/news-1.png'},
+-   {title: 'Важная информация для партнеров', href: '/news/news-page', img: '/images/news-2.png'},
 -];
 
 section.news.section-wrapper
@@ -13,4 +13,4 @@ section.news.section-wrapper
     ul.news__article-list
       each article in articles
         +article(article.title, article.href, article.img)
-    a(href="#").news__more-link.arrow-link Читать больше
+    a(href="/news").news__more-link.arrow-link Читать больше

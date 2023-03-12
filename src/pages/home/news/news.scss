@@ -1,6 +1,6 @@
 @use 'src/styles/mixins';
 @use 'src/styles/vars';
-@use './article/article';
+@use 'src/components/article-card/article';
 
 .news {
   padding-top: var(--section-offset);

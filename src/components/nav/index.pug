@@ -3,11 +3,11 @@ mixin nav(className)
     ul(class=className + '__nav-list')
       - const items = [
       -  {href: '/ion', label: 'ION'},
-      -  {href: '#', label: 'О нас'},
+      -  {href: '/company', label: 'О компании'},
       -  {href: '/map', label: 'Карта'},
-      -  {href: '#', label: 'Новости'},
+      -  {href: '/news', label: 'Новости'},
       -  {href: '/catalog', label: 'Каталог'},
-      -  {href: '#', label: 'Сертификаты'},
+      -  //{href: '#', label: 'Сертификаты'},
       -  {href: '/areas', label: 'Применение'},
       - ];
       each item in items

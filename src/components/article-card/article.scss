@@ -1,15 +1,32 @@
-@use 'src/styles/mixins';
-@use 'src/styles/vars';
+@use '../../styles/mixins';
+@use '../../styles/vars';
 
 .news__article-item {
   @include mixins.flex(null, null, column, wrap);
+  position: relative;
   gap: 5px;
   position: relative;
+  z-index: 10;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   flex: 1 0 45%;
   padding: 165px 30px 30px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--tr-dur) var(--tr-tf);
+  }
+  
+  &:has(a:hover)::before {
+    opacity: 1;
+  }
+  
   &-title {
     @include mixins.font(22px, 700, null, white);
   }
