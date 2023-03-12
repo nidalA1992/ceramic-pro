@@ -21,6 +21,7 @@ import news_1 from "../../assets/news-1.png";
 import news_2 from "../../assets/news-2.png";
 import vector from "../../assets/Vector.png";
 import logo from "../../assets/logo.png";
+import ion_news_preview from "../../assets/news-ion-preview.png";
 
 import "./index.scss";
 
@@ -41,6 +42,7 @@ let imgs = [
   news_2,
   vector,
   logo,
+  ion_news_preview
 ];
 imgs = null;
 

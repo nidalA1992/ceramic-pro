@@ -1,0 +1,21 @@
+@use "src/styles/vars";
+
+.hero {
+  padding-block: calc(var(--section-offset) * 2.5);
+  background-image: url("../../assets/news-ion-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  &__container {}
+  
+  &__title {
+    color: var(--white);
+    max-width: 650px;
+  }
+}
+
+@media (max-width: vars.$tab-width) {
+  .hero {
+    background-position: 95%;
+  }
+}

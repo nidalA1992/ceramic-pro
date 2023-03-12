@@ -23,6 +23,19 @@
     transition: opacity var(--tr-dur) var(--tr-tf);
   }
   
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    top: 20px;
+    left: 20px;
+    background-image: url("../../assets/logo-white.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
   &:has(a:hover)::before {
     opacity: 1;
   }

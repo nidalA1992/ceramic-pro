@@ -14,7 +14,7 @@
 
 .section-wrapper-text {
   display: grid;
-  grid-template-columns: 1fr min(60ch, 100% - 64px) 1fr;
+  grid-template-columns: 1fr min(70ch, 100% - 64px) 1fr;
   grid-column-gap: 32px;
   width: 100%;
 
@@ -45,13 +45,13 @@
   
   @media (max-width: vars.$tab-width) {
     & {
-      font-size: 34px;
+      font-size: 32px;
     }
   }
 
   @media (max-width: vars.$mob-width) {
     & {
-      font-size: 30px;
+      font-size: 28px;
     }
   }
 }
@@ -146,10 +146,10 @@
   @include mixins.flex(null, center);
   transition: color var(--tr-dur) var(--tr-tf);
   &::after {
-    content: '🠒';
+    content: '➝';
     display: inline-block;
     margin-left: 7px;
-    font-size: 32px;
+    font-size: 20px;
   }
 }
 

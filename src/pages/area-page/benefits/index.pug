@@ -9,9 +9,10 @@ include ../../../components/benefit-text-card/index
 -   {title: "Водоотталкивание", descr: "Благодаря гидрофобному эффекту и большому контактному углу"},
 -];
   
-section.benefits.section-wrapper
+section.benefits.section-wrapper-text
   div.benefits__container
     h2.benefits__title.section-title Преимущества
     ul.benefits__list
       each benefit in benefits
-        +benefit-text-card(benefit.title, benefit.descr)
+        li.benefits__list-item
+          +benefit-text-card(benefit.title, benefit.descr)

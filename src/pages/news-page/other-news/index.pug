@@ -1,0 +1,13 @@
+include ../../../components/article-card/index
+
+-const news = [
+-   {title: 'Новая серия продукта ION ', href: '/news/news-page', img: '/images/news-ion-preview.png'},
+-   {title: 'Важная информация для партнеров', href: '/news/news-page', img: '/images/news-2.png'},
+-];
+
+section.other-news.section-wrapper
+  div.other-news__container
+    h2.other-news__title.section-title Еще новости
+    ul.other-news__list
+      each one_news in news
+        +article(one_news.title, one_news.href, one_news.img)

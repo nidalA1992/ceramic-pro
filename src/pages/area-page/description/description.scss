@@ -1,11 +1,17 @@
+@use "src/styles/vars";
+
 .description {
   padding-block: var(--section-offset);
-  
-  &__container {}
   
   &__title {
     margin-bottom: var(--section-title-offset);
   }
-  
-  &__text {}
+}
+
+@media (max-width: vars.$mob-width) {
+  .description {
+    &__title {
+      text-align: center;
+    }
+  }
 }
