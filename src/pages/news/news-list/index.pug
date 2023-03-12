@@ -1,0 +1,14 @@
+include ../../../components/article-card/index
+
+-const articles = [
+-   {title: 'Новая линейка продукции', href: '/news/news-page', img: '/images/news-1.png'},
+-   {title: 'Важная информация для партнеров', href: '/news/news-page', img: '/images/news-2.png'},
+-   {title: 'Новая линейка продукции', href: '/news/news-page', img: '/images/news-1.png'},
+-   {title: 'Важная информация для партнеров', href: '/news/news-page', img: '/images/news-2.png'},
+-];
+  
+section.news-list.section-wrapper
+  h2.news-list__title.section-title Новости
+  ul.news-list__list
+    each article in articles
+      +article(article.title, article.href, article.img)

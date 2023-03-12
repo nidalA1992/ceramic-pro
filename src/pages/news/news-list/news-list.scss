@@ -1,0 +1,20 @@
+@use "src/styles/mixins";
+
+.news-list {
+  padding-block: var(--section-offset);
+  
+  &__title {
+    margin-bottom: var(--section-title-offset);
+  }
+  
+  
+  &__list {
+    @include mixins.flex(null, null, row, wrap);
+    gap: 30px;
+    
+    li {
+      flex-basis: 48%;
+    }
+    
+  }
+}

@@ -2,7 +2,7 @@
 @use '../../styles/vars';
 
 .news__article-item {
-  @include mixins.flex(null, null, column, wrap);
+  @include mixins.flex(end, null, column, wrap);
   position: relative;
   gap: 5px;
   position: relative;
@@ -52,9 +52,9 @@
   
   @media(max-width: vars.$tab-width) {
     & {
+      padding: 140px 25px 25px;
       &-title {
         font-size: 18px;
-        margin-bottom: auto;
       }
     }
   }
