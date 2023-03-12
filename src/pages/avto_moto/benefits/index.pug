@@ -1,0 +1,17 @@
+include ../../../components/benefit-text-card/index
+
+-const benefits = [
+-   {title: "Встроенная защита", descr: "Для всех поверхностей автомобилей и мотоциклов и прочей техники"},
+-   {title: "Легкое очищение", descr: "Быстрое очищение кузова от загрязнения внешней среды"},
+-   {title: "Отсутствие выгарания", descr: "Улучшеная стойкость кузова к износу от ультрафиолетовых излучени"},
+-   {title: "Химическая устойчивость", descr: "Отсутствие микропор и окисления поверхности после нанесения"},
+-   {title: "Долгосрочный результат", descr: "Гарантия от нескольких лет, до пожизненной в зависимости от метода"},
+-   {title: "Водоотталкивание", descr: "Благодаря гидрофобному эффекту и большому контактному углу"},
+-];
+  
+section.benefits.section-wrapper
+  div.benefits__container
+    h2.benefits__title.section-title Преимущества
+    ul.benefits__list
+      each benefit in benefits
+        +benefit-text-card(benefit.title, benefit.descr)

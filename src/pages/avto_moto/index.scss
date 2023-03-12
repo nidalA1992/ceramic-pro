@@ -1,8 +1,11 @@
 @use "src/styles/index";
+@use "src/styles/lib/splide.min.css";
 
 @use "src/components/feedback/feedback";
 @use "src/components/hr/hr";
+@use "src/components/product-card/product-card";
 
 @use "hero/hero";
 @use "benefits/benefits";
 @use "description/description";
+@use "products/products";

@@ -1,6 +1,7 @@
 import { Splide } from "@splidejs/splide";
-
 import { Select } from "../../lib/select";
+
+import {options} from '../../lib/options-splide';
 
 import slide_1 from "../../assets/avto-moto-banner.png";
 import slide_2 from "../../assets/avia-banner.png";
@@ -8,7 +9,9 @@ import slide_3 from "../../assets/gidro-banner.png";
 import slide_4 from "../../assets/clothes-banner.png";
 import slide_5 from "../../assets/offices-banner.png";
 import slide_6 from "../../assets/homes-banner.png";
-import product_1 from "../../assets/product-1.png";
+import ion_base_coat from "../../assets/ion-base-coat.png";
+import ceramic_pro_9h from "../../assets/ceramic-pro-9h.png";
+import ion_top_coat from "../../assets/ion-top-coat.png";
 import iso from "../../assets/iso-img.png";
 import light_on from "../../assets/light-on.png";
 import img_70 from "../../assets/70-img.svg";
@@ -19,14 +22,16 @@ import logo from "../../assets/logo.png";
 
 import "./index.scss";
 
-const imgs = [
+let imgs = [
   slide_1,
   slide_2,
   slide_3,
   slide_4,
   slide_5,
   slide_6,
-  product_1,
+  ion_base_coat,
+  ceramic_pro_9h,
+  ion_top_coat,
   iso,
   light_on,
   img_70,
@@ -35,34 +40,7 @@ const imgs = [
   vector,
   logo,
 ];
-imgs.length = 0;
-
-const options = {
-  type: "loop",
-  perPage: 1,
-  perMove: 1,
-  pauseOnHover: false,
-  pauseOnFocus: true,
-  speed: 1500,
-  gap: "15px",
-  arrows: false,
-  pagination: true,
-  easing: "ease-in-out",
-  drag: "free",
-  snap: true,
-  // autoplay: true,
-  interval: 3500,
-  resetProgress: false,
-  updateOnMove: true,
-  lazyLoad: "nearby",
-  arrowPath:
-    "M43.0607 13.0607C43.6464 12.4749 43.6464 11.5251 43.0607 10.9393L33.5147 1.3934C32.9289 0.807611 31.9792 0.807611 31.3934 1.3934C30.8076 1.97919 30.8076 2.92893 31.3934 3.51472L39.8787 12L31.3934 20.4853C30.8076 21.0711 30.8076 22.0208 31.3934 22.6066C31.9792 23.1924 32.9289 23.1924 33.5147 22.6066L43.0607 13.0607ZM42 10.5L0 10.5V13.5L42 13.5V10.5Z",
-  breakpoints: {
-    960: {
-      perPage: 1,
-    },
-  },
-};
+imgs = null;
 
 const options2 = {
   ...options,

@@ -1,0 +1,30 @@
+@use "src/styles/mixins";
+@use "src/styles/vars";
+@use "src/components/benefit-text-card/benefit-text-card";
+
+.benefits {
+  padding-bottom: var(--section-offset);
+
+  &__title {
+    margin-bottom: var(--section-title-offset);
+  }
+  
+  &__list {
+    @include mixins.flex(space-between, null, row, wrap);
+    gap: 30px;
+
+    .benefit-text-card {
+      flex-basis: 47%;
+    }
+  }
+}
+
+@media (max-width: vars.$mob-width) {
+  .benefits {
+    &__list {
+      .benefit-text-card {
+        flex-basis: 100%;
+      }
+    }
+  }
+}

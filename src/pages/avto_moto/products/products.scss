@@ -1,0 +1,18 @@
+.products {
+  padding-bottom: var(--section-offset);
+  
+  .splide__arrow {
+    background-color: transparent;
+    scale: 1.2;
+
+    svg path {
+      transition: fill var(--tr-dur) var(--tr-tf);
+    }
+    
+    &:hover {
+      svg path {
+        fill: var(--main-pink);
+      }
+    }
+  }
+}
