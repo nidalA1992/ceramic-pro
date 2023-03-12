@@ -217,4 +217,45 @@
       }
     }
   }
+  
+  @media (max-width: vars.$tab-width) {
+    & {
+      padding: 70px 60px;
+    }
+    
+    &__close-button {
+      top: 20px;
+      right: 20px;
+      svg {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+
+  @media (max-width: vars.$mob-width) {
+    & {
+      padding: 40px 30px;
+      gap: 25px;
+      
+      &__title {
+        font-size: 16px;
+        max-width: 300px;
+      }
+      
+      &__input {
+        padding: 10px 15px;
+      }
+
+      &__close-button {
+        top: 15px;
+        right: 15px;
+        svg {
+          width: 35px;
+          height: 35px;
+        }
+      }
+      
+    }
+  }
 }
