@@ -1,6 +1,11 @@
 mixin label-links(className, items)
   div(class= className + " label-links")
     each item in items 
-      a(class= className + " label-links__link" href=item.href)
-        |#{item.label}
-        |!{item.icon}
+      if item.type === "button"
+        button(class= className + " label-links__link" data-modal-form)
+          | #{item.label}
+          | !{item.icon}
+      else 
+        a(class= className + " label-links__link" href=item.href)
+          |#{item.label}
+          |!{item.icon}

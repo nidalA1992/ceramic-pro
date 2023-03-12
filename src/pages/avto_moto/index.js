@@ -1,4 +1,5 @@
-import { Select } from "../../lib/select";
+import { Select } from "../../lib/Select";
+import { ModalForm } from "../../lib/ModalForm";
 import { Splide } from "@splidejs/splide";
 
 import {options} from "../../lib/options-splide";
@@ -27,3 +28,5 @@ new Splide(".products-slider", {
     },
   },
 }).mount();
+
+new ModalForm().init();

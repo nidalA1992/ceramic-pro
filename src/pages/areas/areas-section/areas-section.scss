@@ -10,7 +10,6 @@
   
   &__list {
     column-count: 2;
-    //@include mixins.flex(space-between, null, row, wrap);
     column-gap: 50px;
     
     & li:not(:first-child) {

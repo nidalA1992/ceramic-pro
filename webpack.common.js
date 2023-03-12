@@ -12,7 +12,7 @@ module.exports = {
     map: path.resolve(__dirname, "src", "pages", "map", "index.js"),
   },
   output: {
-    filename: "[name]/index.js",
+    filename: "[name]/Select.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
     assetModuleFilename: "images/[name][ext]",

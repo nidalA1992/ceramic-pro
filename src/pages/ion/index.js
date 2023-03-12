@@ -1,4 +1,5 @@
-import { Select } from "../../lib/select";
+import { Select } from "../../lib/Select";
+import { ModalForm } from "../../lib/ModalForm";
 
 import hero_img from "../../assets/ion-hero.png";
 import hero_img_back from "../../assets/ion-hero-back.png";
@@ -28,3 +29,4 @@ img.length = 0;
 import "./index.scss";
 
 new Select(".select-lang").init();
+new ModalForm().init();

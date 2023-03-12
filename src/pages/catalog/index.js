@@ -1,4 +1,4 @@
-import { Select } from "../../lib/select";
+import { Select } from "../../lib/Select";
 
 import "./index.scss";
 

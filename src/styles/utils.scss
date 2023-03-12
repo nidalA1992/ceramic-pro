@@ -167,3 +167,54 @@
     }
   }
 }
+
+.modal {
+  @include mixins.flex(center, center);
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.modal-form {
+  @include mixins.flex(null, null, column);
+  gap: 40px;
+  position: relative;
+  padding: 90px 120px;
+  background-color: var(--white);
+  cursor: initial;
+
+  &__title {
+    @include mixins.font(null, 300, 1.5);
+    text-align: center;
+    max-width: 450px;
+  }
+
+  &__input {
+    border: 1px solid #cecece;
+    padding: 15px 25px;
+
+    &::placeholder {
+      @include mixins.font(null, 300, null, #cecece);
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 1100;
+
+    svg path {
+      transition: stroke var(--tr-dur) var(--tr-tf);
+    }
+
+    &:hover {
+      svg path {
+        stroke: var(--main-pink);
+      }
+    }
+  }
+}
