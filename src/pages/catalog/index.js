@@ -1,5 +1,5 @@
-import { Select } from "../../lib/Select";
+import {initApp} from "../../main";
 
 import "./index.scss";
 
-new Select(".select-lang").init();
+initApp();

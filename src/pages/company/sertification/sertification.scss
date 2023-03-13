@@ -1,0 +1,58 @@
+@use "src/styles/mixins";
+@use "src/styles/vars";
+
+.sertification {
+  padding-block: var(--section-offset);
+  &__container {
+    background-color: white;
+    justify-self: center;
+  }
+  
+  &__title {
+    padding-block: 15px;
+    color: var(--main-pink);
+    text-align: center;
+    border-bottom: 1px solid var(--greyEC);
+  }
+  
+  &__list {
+    list-style: circle;
+    li {
+      padding-block: 10px;
+      padding-right: 40px;
+      margin-left: 50px;
+      &::marker {
+        color: var(--main-pink);
+      }
+    }
+    li:first-child {
+      padding-top: 30px;
+    }
+    li:last-child {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: vars.$mob-width) {
+  .sertification {
+    &__title {
+      font-size: 16px;
+      padding-block: 10px;
+    }
+    
+    &__list {
+      li {
+        padding-block: 7px;
+        padding-right: 20px;
+        margin-left: 30px;
+      }
+      li:first-child {
+        padding-top: 15px;
+      }
+      li:last-child {
+        padding-bottom: 15px;
+      }
+    }
+  }
+}

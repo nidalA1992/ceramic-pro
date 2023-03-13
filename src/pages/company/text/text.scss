@@ -1,0 +1,10 @@
+.text {
+  margin-bottom: calc(var(--section-title-offset) / 2);
+  &__title {
+    margin-bottom: calc(var(--section-title-offset) / 2);
+  }
+  
+  &__text:not(:last-child) {
+    margin-bottom: calc(var(--section-title-offset) / 1.5);
+  }
+}

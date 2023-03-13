@@ -4,9 +4,10 @@ header.header.section-wrapper
   div.header__container
     div.header__top
       include ../logo/index
+      button.pink-button.sertification(data-modal-form) Заказать сертификат
+      button.header__connect-button.callback(data-modal-form) Связаться с нами
       include select-lang/index
-      button.header__connect-button(data-modal-form) Связаться с нами
-      button.header__burger-button 
+      button.header__burger-button#burger-button 
         <svg width="35" height="22" viewBox="0 0 50 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line x1="50" y1="1" y2="1" stroke="black" stroke-width="2"/>
           <line x1="50" y1="11" y2="11" stroke="black" stroke-width="2"/>

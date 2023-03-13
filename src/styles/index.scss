@@ -5,9 +5,11 @@
 
 @use "src/components/header/header";
 @use "src/components/footer/footer";
+@use "src/components/nav/nav";
 @use "src/components/hr/hr";
 @use "src/components/socials/index";
 @use "src/components/logo/logo";
 @use "src/components/label-socials/label-socials";
 @use "src/components/label-links/label-links";
 @use "src/components/modal-form/modal-form";
+@use "src/components/burger-menu/burger-menu";

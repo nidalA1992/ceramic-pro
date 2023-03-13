@@ -41,6 +41,17 @@
       height: 40px;
     }
   }
+
+  .sertification {
+    margin-right: 20px;
+    margin-left: auto;
+    padding: 5px 30px;
+    border: 1px solid var(--main-pink);
+  }
+
+  .callback {
+    margin-right: 20px;
+  }
   
   &__connect-button {
     border: 1px solid var(--mid-grey);
@@ -55,7 +66,6 @@
       color: var(--white);
     }
   }
-
 }
 
 @media (max-width: vars.$tab-width) {
@@ -63,13 +73,21 @@
     &__connect-button {
       display: none;
     }
-
+    .sertification {
+      display: none;
+    }
+    
     &__bottom {
       display: none;
     }
     
     &__burger-button {
       display: block;
+      &:active {
+        & svg line {
+          stroke: var(--main-pink);
+        }
+      }
     }
 
     hr {

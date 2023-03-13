@@ -1,0 +1,60 @@
+@use "src/styles/mixins";
+@use "src/styles/vars";
+
+.text-img {
+  &__container {
+    @include mixins.flex;
+  }
+  
+  &__text {
+    flex-basis: 55%;
+  }
+  &__img {
+    flex-basis: 45%;
+  }
+  
+  &__text-title {
+    @include mixins.font(28px, 500, null, var(--main-pink));
+    margin-bottom: calc(var(--section-title-offset) / 2);
+  }
+  
+  &__text-text {}
+  
+  &__img {
+    position: relative;
+
+    &::before {
+      left: 50%;
+      top: 0;
+      translate: -50% 0;
+      position: absolute;
+      content: "Ceramic-Pro";
+      display: inline-block;
+      @include mixins.font(110px, 600, null, white);
+      writing-mode: vertical-lr;
+      height: 100%;
+      z-index: -1;
+      white-space: nowrap;
+      text-align: center;
+    }
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../assets/ion-top-coat.png");
+  }
+}
+
+@media (max-width: vars.$mob-width) {
+  .text-img {
+    &__text {
+      flex-basis: 100%;
+      
+      &-title {
+        font-size: 24px;
+      }
+    }
+    
+    &__img {
+      display: none;
+    }
+  }
+}

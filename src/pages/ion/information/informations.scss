@@ -3,7 +3,10 @@
 @use 'src/components/text-card/text-card';
 
 .information {
-  padding-bottom: var(--section-offset);
+  &__video {
+    padding-block: var(--section-title-offset);
+    @include mixins.flex(center);
+  }
   
   &__title {
     margin-bottom: var(--section-offset);
@@ -26,8 +29,6 @@
   
   &__schema-wrapper {
     gap: var(--section-title-offset);
-    //column-gap: 20px;
-    //row-gap: 30px;
     margin-bottom: var(--section-title-offset);
     @include mixins.flex(center, center, null, wrap);
     

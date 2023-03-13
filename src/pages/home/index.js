@@ -1,7 +1,5 @@
 import { Splide } from "@splidejs/splide";
-import { Select } from "../../lib/Select";
-import {ModalForm} from "../../lib/ModalForm";
-
+import {initApp} from "../../main";
 
 import {options} from '../../lib/options-splide';
 
@@ -75,5 +73,4 @@ new Splide(".products-slider", {
 
 new Splide(".benefits-slider", options).mount();
 
-new Select(".select-lang").init();
-new ModalForm().init();
+initApp();

@@ -1,0 +1,12 @@
+.map-container {
+  padding-block: calc(var(--section-offset));
+  
+  &__title {
+    margin-bottom: var(--section-title-offset);
+  }
+}
+
+#map {
+  height: 80vh;
+  width: 100%;
+}

@@ -15,6 +15,18 @@
 
 @media (max-width: vars.$desc-width-s) {
   .label-socials {
-    background-size: contain;
+    background-size: 250vw;
+  }
+}
+
+@media (max-width: vars.$tab-width) {
+  .label-socials {
+    background-size: 300vw;
+  }
+}
+
+@media (max-width: vars.$mob-width) {
+  .label-socials {
+    background-size: 450vw;
   }
 }

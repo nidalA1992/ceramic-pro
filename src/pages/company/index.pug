@@ -1,6 +1,22 @@
 extends ../../components/base-template
 
 block content
-  h1 company
+  //hero
+  include hero/index
+  //text
+  include text/index
+  //text-with-image
+  include text-with-img/index
+  //sertifications
+  include sertification/index
+  //tests
+  include tests/index
+  //video
+  section.section-wrapper.video
+    div.video-wrapper
+      <iframe width="1519" height="591" src="https://www.youtube.com/embed/GXN7WqHo9hQ" title="Как правильно применять в деле продукцию Ceramic Pro Uzbekistan/ Виды продукта" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  //feedback
+  include ../../components/feedback/index
+  include ../../components/hr/index
   //social-link
   include ../../components/label-socials/index

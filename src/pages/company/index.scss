@@ -1,2 +1,16 @@
 @use "src/styles/index";
 
+@use "src/components/feedback/feedback";
+@use "src/components/back-page-button/back-page-button";
+
+@use "hero/hero";
+@use "text/text";
+@use "text-with-img/text-with-img";
+@use "sertification/sertification";
+@use "tests/tests";
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: var(--section-offset);
+}

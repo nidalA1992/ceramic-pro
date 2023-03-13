@@ -1,7 +1,5 @@
-import { Select } from "../../lib/Select";
-import { ModalForm } from "../../lib/ModalForm";
+import { initApp } from "../../main";
 
 import "./index.scss";
 
-new Select(".select-lang").init();
-new ModalForm().init();
+initApp();

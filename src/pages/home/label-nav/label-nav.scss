@@ -10,3 +10,21 @@
     background-size: contain;
   }
 }
+
+@media (max-width: vars.$desc-width-s) {
+  .label-nav {
+    background-size: 250vw;
+  }
+}
+
+@media (max-width: vars.$tab-width) {
+  .label-nav {
+    background-size: 300vw;
+  }
+}
+
+@media (max-width: vars.$mob-width) {
+  .label-nav {
+    background-size: 450vw;
+  }
+}

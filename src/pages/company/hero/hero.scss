@@ -1,0 +1,36 @@
+.hero {
+  position: relative;
+  padding-block: calc(var(--section-offset) * 2);
+  background: var(--black-white-gradient);
+  z-index: 10;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    inset: 0;
+    z-index: -1;
+    background: url("../../assets/Vector.png");
+    background-position: center;
+    opacity: 0.05;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background-image: url("../../assets/about-us.png");
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+  }
+  
+  &__title {
+    color: var(--white);
+  }
+  
+  &__img {
+    width: 50%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+include ../nav/index
+  
+div.burger-menu#burger-menu
+  a.burger-menu__logo(href="/")
+    img(src="/images/logo-white.png" alt="Логотип Ceramic Pro")
+  +nav("burger-menu")
+  include ../socials/index
+  button.burger-menu__close-button#close-burger-button
+    <svg width="60" height="60" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M73.3867 25.5488L25.2097 73.0765" stroke="white"/>
+      <path d="M74.4609 74.6841L24.0436 23.8096" stroke="white"/>
+    </svg>

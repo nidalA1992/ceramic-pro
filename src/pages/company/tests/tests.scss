@@ -1,0 +1,60 @@
+@use "src/styles/mixins";
+@use "src/styles/vars";
+
+.tests {
+  padding-bottom: var(--section-offset-);
+  
+  &__title {
+    text-align: center;
+    color: var(--main-pink);
+    margin-bottom: calc(var(--section-title-offset) / 2);
+  }
+  
+  &__icons {
+    @include mixins.flex(center, center);
+    padding-top: var(--section-title-offset);
+    padding-bottom: var(--section-offset);
+    gap: 50px;
+    
+    img {
+      max-width: 70px;
+      display: inline-block;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  
+  &__list {
+    margin-bottom: 0;
+  }
+  
+  &__list-item {
+    display: flex;
+    font-size: 14px;
+    gap: 10px;
+    padding-block: 10px;
+    
+    & > * {
+      flex-basis: 50%;
+    }
+    
+    p {
+      display: inline-block;
+      font-weight: 300;
+    }
+  }
+}
+
+@media (max-width: vars.$mob-width) {
+  .tests {
+    &__title {
+      font-size: 16px;
+    }
+    
+    &__list-item {
+      font-size: 12px;
+      gap: 7px;
+      padding-block: 7px;
+    }
+  }
+}
