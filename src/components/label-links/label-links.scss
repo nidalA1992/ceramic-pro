@@ -17,7 +17,7 @@
     }
 
     svg path, svg rect {
-      fill: var(--mid-grey);
+      fill: var(--white);
       transition: fill var(--tr-dur) var(--tr-tf);
     }
 
@@ -48,9 +48,9 @@
           margin-left: 0;
         }
         
-        &:hover {
+        &:hover, &:active {
           svg path, svg rect {
-            fill: var(--light-grey);
+            fill: var(--main-pink);
           }
         }
       }

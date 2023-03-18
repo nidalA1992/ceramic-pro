@@ -1,31 +1,14 @@
 .hero {
-  position: relative;
   padding-block: calc(var(--section-offset) * 2);
-  background: var(--black-white-gradient);
-  z-index: 10;
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    inset: 0;
-    z-index: -1;
-    background: url("../../assets/Vector.png");
-    background-position: center;
-    opacity: 0.05;
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    inset: 0;
-    background-image: url("../../assets/about-us.png");
-    background-size: 35%;
-    background-repeat: no-repeat;
-    background-position: 90% center;
-  }
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/about-us-background.png");
   
   &__title {
+    color: var(--white);
+    max-width: 45ch;
+  }
+  
+  &__descr {
+    max-width: 65ch;
     color: var(--white);
   }
   
