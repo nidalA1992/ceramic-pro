@@ -36,7 +36,10 @@ export class Select {
   }
   setValue(value, label) {
     this.display.setAttribute('data-value', value);
-    this.display.textContent = label;
+    this.display.innerHTML = `
+      <img src="/images/${value}.png" alt="Изображение флага"/>
+      ${label}
+    `;
     this.value = {value, label};
     this.close();
   }
