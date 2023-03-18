@@ -4,7 +4,7 @@
 .header__nav {
   &-list {
     @include mixins.flex(space-evenly);
-    @include mixins.font(12px, 300, null, var(--white));
+    @include mixins.font(10px, 300, null, var(--white));
     letter-spacing: 2px;
     text-transform: uppercase;
   }

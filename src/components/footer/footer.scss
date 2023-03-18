@@ -18,7 +18,7 @@
     }
     &-item {
       &-link {
-        @include mixins.font(14px, 300, 3, var(--dark-grey));
+        @include mixins.font(12px, 300, 2, var(--dark-grey));
         text-transform: uppercase;
         letter-spacing: 1px;
         border-bottom: 1px solid transparent;

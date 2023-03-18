@@ -13,7 +13,8 @@ module.exports = {
     news: path.resolve(__dirname, "src", "pages", "news", "index.js"),
     news_page: path.resolve(__dirname, "src", "pages", "news-page", "index.js"),
     company: path.resolve(__dirname, "src", "pages", "company", "index.js"),
-    contacts: path.resolve(__dirname, "src", "pages", "contacts", "index.js")
+    contacts: path.resolve(__dirname, "src", "pages", "contacts", "index.js"),
+    sertification: path.resolve(__dirname, "src", "pages", "sertification", "index.js"),
   },
   output: {
     filename: "[name]/index.js",
@@ -121,6 +122,13 @@ module.exports = {
       template: path.join(__dirname, "src", "pages", "contacts", "index.pug"),
       filename: "contacts/index.html",
       chunks: ["contacts"],
+      minify: false,
+    }),
+    new HtmlWebpackPlugin({
+      title: "sertification",
+      template: path.join(__dirname, "src", "pages", "sertification", "index.pug"),
+      filename: "sertification/index.html",
+      chunks: ["sertification"],
       minify: false,
     }),
   ],
