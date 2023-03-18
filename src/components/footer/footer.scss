@@ -44,12 +44,13 @@
     display: inline-block;
   }
 
-  #logo-icon {
+  #logo-icon,
+  .logo__kavaca{
     display: inline-block;
     width: 60px;
     height: 60px;
   }
-  
+
   @media (max-width: vars.$tab-width) {
     & {
       &__nav {
@@ -70,10 +71,10 @@
       &__logo-wrapper {
         @include mixins.flex(center, center, column)
       }
-      
-      .logo {
-        width: 50px;
-      }
+      //
+      //.logo {
+      //  width: 50px;
+      //}
     }
   }
 }

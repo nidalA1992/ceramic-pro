@@ -10,6 +10,27 @@
   transition: transform var(--tr-dur) var(--tr-tf);
   transform: translateX(100%);
   
+  &__languages {
+    @include mixins.flex(center);
+    gap: 20px;
+    
+    & a:first-child {
+      background-image: url("../../assets/uzb.png");
+    }
+    & a:last-child {
+      background-image: url("../../assets/rus.png");
+    }
+    
+    
+    &-lang {
+      height: 30px;
+      width: 30px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+  
   &.menu-is-open {
     transform: none;
   }

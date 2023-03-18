@@ -29,9 +29,9 @@ section.information.section-wrapper
     ul.information__list
       each text in texts
         +text-card(text.title, text.text)
-    div.information__schema-wrapper
-      img.information__schema(src="../images/ceramic-pro-9h-schema.png")
-      img.information__schema(src="../images/ceramic-pro-ion-schema.png")
+      picture
+        source(media="(min-width: 900px)" srcset="/images/ion-schema-desc.png")
+        img(src="/images/ion-schema-mob.jpg" alt="Изображение схемы структуры покрытия Ion")
     p.information__descr.text У каждого варианта есть свои преимущества в зависимости от поставленной конкретной задачи, однако очевидно, что <span>Ceramic Pro ION</span> превосходит почти во всех аспектах как предыдущее поколение, так и технологию PPF.
     div.information__video
       <iframe width="1519" height="591" src="https://www.youtube.com/embed/cxzxzGiK5-w" title="Ceramic Pro Uzbekistan. Профессиональная линейка нанокерамической продукции" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

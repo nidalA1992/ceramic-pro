@@ -8,20 +8,6 @@
   background-size: cover;
   z-index: 10;
   
-  &::before {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    background-image: url("../../assets/logo-white.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 20px;
-    left: 15px;
-    height: 40px;
-    width: 180px;
-  }
-  
   &::after {
     content: '';
     position: absolute;

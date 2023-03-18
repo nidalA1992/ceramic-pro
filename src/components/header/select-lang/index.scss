@@ -2,8 +2,11 @@
 
 .select-lang {
   position: relative;
-  //margin-left: auto;
   margin-right: 5%;
+
+  a {
+    display: block;
+  }
   
   &-display {
     cursor: pointer;

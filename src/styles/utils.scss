@@ -200,7 +200,11 @@
       @include mixins.font(null, 300, null, #cecece);
     }
   }
-
+  
+  textarea {
+    resize: none;
+  }
+  
   &__close-button {
     position: absolute;
     top: 30px;

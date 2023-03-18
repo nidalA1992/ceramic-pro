@@ -21,7 +21,7 @@ export class ModalForm {
       </h3>
       <input class="modal-form__input" type="text" placeholder="Ваше имя">
       <input class="modal-form__input" type="tel" placeholder="Номер телефона" required>
-      <input class="modal-form__input" type="text" placeholder="Город, регион" required>
+      <textarea class="modal-form__input" type="text" placeholder="Сообщение" rows="5"></textarea>
       <button class="modal-form__submit pink-button">
         Отправить заявку
       </button>

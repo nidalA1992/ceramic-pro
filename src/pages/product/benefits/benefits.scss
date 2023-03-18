@@ -29,7 +29,7 @@
     text-align: end;
     
     .benefit-text-card {
-      &__descr {
+      &__title {
         padding-left: 0;
         padding-right: 20px;
         &::before {
@@ -44,16 +44,30 @@
 @media (max-width: vars.$tab-width) {
   .benefits {
     &__container {
-      flex-direction: column;
-      gap: 30px;
+      justify-content: center;
+      gap: 10vw;
     }
     
     &__title {
-      font-size: 20px;
+      font-size: 18px;
     }
     
     &__img {
       display: none;
+    }
+
+    .benefit-text-card {
+      row-gap: 10vw;
+     &__title {
+       text-align: start;
+       padding-left: 20px;
+       padding-right: 0px;
+       font-size: 16px;
+       &::before {
+         left: 0;
+         right: initial;
+       }
+     }
     }
   }
 }

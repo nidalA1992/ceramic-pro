@@ -2,15 +2,9 @@
 
 .benefit-text-card {
   &__title {
-    margin-bottom: 10px;
-  }
-  
-  &__descr {
     position: relative;
+    margin-bottom: 10px;
     padding-left: 20px;
-    max-width: 350px;
-    line-height: 1.4;
-    font-size: 17px;
 
     &::before {
       content: '';
@@ -21,6 +15,12 @@
       width: 1px;
       background-color: var(--main-pink);
     }
+  }
+  
+  &__descr {
+    max-width: 350px;
+    line-height: 1.4;
+    font-size: 17px;
   }
 }
 

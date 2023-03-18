@@ -36,6 +36,10 @@ export class MapInfoWindow {
   }
   
   open() {
+    if(document.querySelector('.map-info')) {
+      document.querySelector('.map-info').remove();
+    }
+    
     document.body.append(this.infoWindow);
   }
   

@@ -13,9 +13,10 @@ module.exports = {
     news: path.resolve(__dirname, "src", "pages", "news", "index.js"),
     news_page: path.resolve(__dirname, "src", "pages", "news-page", "index.js"),
     company: path.resolve(__dirname, "src", "pages", "company", "index.js"),
+    contacts: path.resolve(__dirname, "src", "pages", "contacts", "index.js")
   },
   output: {
-    filename: "[name]/Select.js",
+    filename: "[name]/index.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
     assetModuleFilename: "images/[name][ext]",
@@ -113,6 +114,13 @@ module.exports = {
       template: path.join(__dirname, "src", "pages", "company", "index.pug"),
       filename: "company/index.html",
       chunks: ["company"],
+      minify: false,
+    }),
+    new HtmlWebpackPlugin({
+      title: "contacts",
+      template: path.join(__dirname, "src", "pages", "contacts", "index.pug"),
+      filename: "contacts/index.html",
+      chunks: ["contacts"],
       minify: false,
     }),
   ],

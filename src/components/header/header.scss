@@ -83,11 +83,16 @@
     
     &__burger-button {
       display: block;
+      margin-left: auto;
       &:active {
         & svg line {
           stroke: var(--main-pink);
         }
       }
+    }
+    
+    .select-lang {
+      display: none;
     }
 
     hr {
@@ -98,11 +103,6 @@
 
 @media (max-width: vars.$mob-width) {
   .header {
-    
-    &__burger-button {
-      margin-left: auto;
-    }
-    
     .logo {
       height: 30px;
     }
