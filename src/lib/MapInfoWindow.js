@@ -14,10 +14,13 @@ export class MapInfoWindow {
     this.infoWindow.classList.add("map-info");
 
     this.infoWindow.innerHTML = `
-      <p class="map-info__row">${this.title}</p>
-      <p class="map-info__row">${this.addres}</p>
-      <p class="map-info__row">Номер: <a href="tel:${this.number}">${this.number}</a></p>
-      <p class="map-info__row">Email: <a href="mailto:${this.email}">${this.email}</a></p>
+      <img src="/images/feedback-form.png" alt="Фото офиса Ceramic Pro"/>
+      <div class="map-info__wrapper">
+        <p class="map-info__row">${this.title}</p>
+        <p class="map-info__row">${this.addres}</p>
+        <p class="map-info__row">Номер: <a href="tel:${this.number}">${this.number}</a></p>
+        <p class="map-info__row">Email: <a href="mailto:${this.email}">${this.email}</a></p>
+      </div>
     `;
     
     this.closeButton.innerHTML = `

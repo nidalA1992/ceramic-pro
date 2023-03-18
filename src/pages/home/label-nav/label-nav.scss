@@ -2,7 +2,8 @@
 
 .label-nav {
   background: var(--black) url('../../assets/Vector-alfa.png');
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
 }
 
 @media (max-width: vars.$desc-width-s) {

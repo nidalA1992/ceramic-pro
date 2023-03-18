@@ -27,7 +27,8 @@
       left: -50vw;
       background: var(--white) url('../../assets/Vector.png');
       background-repeat: repeat;
-      background-size: contain;
+      background-position: center;
+      background-size: 20%;
       z-index: -1;
     }
   }
@@ -80,7 +81,7 @@
     &__bottom {
       display: none;
     }
-    
+
     &__burger-button {
       display: block;
       margin-left: auto;
@@ -113,6 +114,26 @@
     
     .select-lang {
       display: none;
+    }
+  }
+}
+
+@media (max-width: vars.$tab-width-l) {
+  .header {
+    &__top {
+      &::before {
+        background-size: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: vars.$mob-width) {
+  .header {
+    &__top {
+      &::before {
+        background-size: 40%;
+      }
     }
   }
 }
