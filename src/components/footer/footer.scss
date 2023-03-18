@@ -71,10 +71,6 @@
       &__logo-wrapper {
         @include mixins.flex(center, center, column)
       }
-      //
-      //.logo {
-      //  width: 50px;
-      //}
     }
   }
 }

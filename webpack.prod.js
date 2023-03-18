@@ -25,7 +25,7 @@ module.exports = merge(common, {
     }),
   ],
   optimization: {
-    minimize: false,
+    // minimize: false,
     minimizer: [
       "...",
       new ImageMinimizerPlugin({
