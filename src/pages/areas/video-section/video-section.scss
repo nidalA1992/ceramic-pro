@@ -1,0 +1,9 @@
+@use "src/styles/mixins";
+
+.video {
+  &__wrapper {
+    padding-bottom: var(--section-offset);
+    @include mixins.flex(center);
+  }
+}
+  

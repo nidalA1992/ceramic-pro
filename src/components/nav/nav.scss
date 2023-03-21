@@ -4,14 +4,13 @@
 .header__nav {
   &-list {
     @include mixins.flex(space-evenly);
-    @include mixins.font(10px, 300, null, var(--white));
+    @include mixins.font(12px, 300, null, var(--white));
     letter-spacing: 2px;
     text-transform: uppercase;
   }
   &-item {
-    
     &:first-child {
-      @include mixins.font(null, 400, null, var(--main-pink));
+      @include mixins.font(null, 600, null, var(--main-pink));
     }
     
     border-bottom: 1px solid transparent;
@@ -20,6 +19,17 @@
       border-color: var(--mid-grey);
       color: white;
     }
+    
+    &-link {
+      padding: 2px 5px;
+
+    }
+  }
+  
+  .active-nav {
+    font-weight: 600;
+    color: var(--black);
+    background-color: var(--main-pink);
   }
 }
 

@@ -3,11 +3,6 @@
 @use 'src/components/text-card/text-card';
 
 .information {
-  &__video {
-    padding-block: var(--section-title-offset);
-    @include mixins.flex(center);
-  }
-  
   &__title {
     margin-bottom: var(--section-offset);
     text-align: center;

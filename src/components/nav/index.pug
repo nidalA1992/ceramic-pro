@@ -1,4 +1,4 @@
-mixin nav(className)
+mixin nav(className, active)
   nav(class=className + '__nav')
     ul(class=className + '__nav-list')
       - const items = [
@@ -7,10 +7,10 @@ mixin nav(className)
       -  {href: '/map', label: 'Карта'},
       -  {href: '/news', label: 'Новости'},
       -  {href: '/catalog', label: 'Каталог'},
-      -  {href: '/contacts', label: 'Контакты'},
       -  {href: '/areas', label: 'Применение'},
-      -  {href: '/sertification', label: 'Сертификаты'}
+      -  {href: '/sertification', label: 'Сертификаты'},
+      -  {href: '/contacts', label: 'Контакты'},
       - ];
       each item in items
         li(class=className + '__nav-item')
-          a(class=className + '__nav-item-link' href=item.href) #{item.label}
+          a(class=className + '__nav-item-link' href=item.href data-nav= item.href.slice(1)) #{item.label}

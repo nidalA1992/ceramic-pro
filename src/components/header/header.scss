@@ -15,7 +15,7 @@
   &__top {
     position: relative;
     @include mixins.flex(null, center);
-    padding-block: 20px;
+    padding-block: 16px;
     z-index: 100;
 
     &::before {

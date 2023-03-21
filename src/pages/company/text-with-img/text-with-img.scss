@@ -24,9 +24,8 @@
     position: relative;
 
     &::before {
-      left: 50%;
+      content: '';
       top: 0;
-      translate: -50% 0;
       position: absolute;
       content: "Ceramic-Pro";
       display: inline-block;
@@ -38,7 +37,7 @@
       text-align: center;
     }
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right center;
     background-image: url("../../assets/ion-top-coat.png");
   }
 }

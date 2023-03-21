@@ -1,6 +1,7 @@
 .hero {
   padding-block: calc(var(--section-offset) * 2);
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/about-us-background.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/about-us-background.png");
+  background-attachment: fixed;
   
   &__title {
     color: var(--white);
