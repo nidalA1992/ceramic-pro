@@ -23,6 +23,18 @@
     transition: opacity var(--tr-dur) var(--tr-tf);
   }
 
+  &::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 7%;
+    right: 1.5%;
+    background-image: url("../../assets/logo-white.png");
+  }
+
   &:has(a:hover)::before {
     opacity: 1;
   }

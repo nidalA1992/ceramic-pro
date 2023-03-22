@@ -264,7 +264,7 @@
 }
 
 .map-info {
-  position: absolute;
+  position: fixed;
   @include mixins.flex;
   top: 50%;
   left: 50%;

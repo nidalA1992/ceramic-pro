@@ -17,6 +17,18 @@
     z-index: -1;
     transition: opacity var(--tr-dur) var(--tr-tf);
   }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 25%;
+    right: 2%;
+    background-image: url("../../assets/logo-white.png");
+  }
   
   &:has(a:hover)::after {
     opacity: 0.5;
