@@ -2,6 +2,7 @@
 @use "src/styles/vars";
 
 .text-img {
+  padding-block: var(--section-offset);
   &__container {
     @include mixins.flex;
   }
@@ -18,7 +19,9 @@
     margin-bottom: calc(var(--section-title-offset) / 2);
   }
   
-  &__text-text {}
+  &__text-text:not(:last-child) {
+    margin-bottom: 20px;
+  }
   
   &__img {
     position: relative;

@@ -2,9 +2,10 @@
 @use "src/styles/vars";
 
 .sertification {
+  background-color: white;
   padding-block: var(--section-offset);
   &__container {
-    background-color: white;
+    //background-color: white;
     justify-self: center;
   }
   

@@ -1,0 +1,20 @@
+.form-sertification {
+  padding-block: var(--section-offset);
+  
+  &__container {}
+  
+  &__title {
+    margin-bottom: var(--section-title-offset);
+    text-align: center;
+  }
+  
+  &__form {
+    padding: 0;
+  }
+  
+  &__input {}
+  
+  &__text-area {}
+  
+  &__button {}
+}

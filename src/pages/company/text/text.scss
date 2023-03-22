@@ -1,10 +1,17 @@
-.text {
-  margin-bottom: calc(var(--section-title-offset) / 2);
+.text-section {
+  padding-block: var(--section-offset);
+  background-color: white;
+  //margin-bottom: calc(var(--section-title-offset) / 2);
   &__title {
     margin-bottom: calc(var(--section-title-offset) / 2);
   }
   
   &__text:not(:last-child) {
     margin-bottom: calc(var(--section-title-offset) / 1.5);
+  }
+  
+  .back-page-button {
+    padding-block: 0;
+    margin-bottom: 50px;
   }
 }

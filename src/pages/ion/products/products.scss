@@ -3,12 +3,14 @@
 .products {
   &__top {
     background-color: black;
-    padding-bottom: var(--section-title-offset);
+    //padding-bottom: var(--section-title-offset);
+    padding-bottom: var(--section-offset);
   }
   
   &__bottom {
     padding-top: var(--section-title-offset);
     padding-bottom: var(--section-offset);
+    background-color: var(--background-main);
   }
   
   &__title {

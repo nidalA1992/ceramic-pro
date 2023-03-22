@@ -2,7 +2,7 @@
 @use "src/styles/vars";
 
 .tests {
-  padding-bottom: var(--section-offset-);
+  padding-block: var(--section-offset);
   
   &__title {
     text-align: center;
@@ -12,8 +12,6 @@
   
   &__icons {
     @include mixins.flex(center, center);
-    padding-top: var(--section-title-offset);
-    padding-bottom: var(--section-offset);
     gap: 50px;
     
     img {
@@ -25,7 +23,7 @@
   }
   
   &__list {
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
   
   &__list-item {

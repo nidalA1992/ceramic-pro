@@ -3,8 +3,9 @@
 @use 'src/components/text-card/text-card';
 
 .information {
+  padding-block: var(--section-offset);
   &__title {
-    margin-bottom: var(--section-offset);
+    margin-bottom: var(--section-title-offset);
     text-align: center;
     @include mixins.font(30px, 400, null, var(--main-pink));
     
