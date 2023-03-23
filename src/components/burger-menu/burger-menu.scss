@@ -1,7 +1,8 @@
 @use "src/styles/mixins";
+@use "src/styles/vars";
 
 .burger-menu {
-  @include mixins.flex(space-between, null, column);
+  display: none;
   position: fixed;
   inset: 0;
   background-color: var(--black);
@@ -92,11 +93,16 @@
   .socials {
     align-self: center;
   }
-
-
+  
   .active-nav {
     font-weight: 600;
-    color: var(--black);
+    color: var(--black) !important;
     background-color: var(--main-pink);
+  }
+}
+
+@media (max-width: vars.$tab-width) {
+  .burger-menu {
+    @include mixins.flex(space-between, null, column);
   }
 }

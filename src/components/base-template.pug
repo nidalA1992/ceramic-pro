@@ -13,6 +13,47 @@ html(lang='ru')
 
     block title
   body
+    <style>
+      |.loader {
+      |  width : 72px;
+      |  height: 72px;
+      |  display: inline-block;
+      |  position: relative;
+      |}
+      | .loader::after, .loader::before {
+      |    content: '';
+      |    width : 72px;
+      |    height: 72px;
+      |    border:2px solid white;
+      |    position: absolute;
+      |    left:0;
+      |    top: 0;
+      |    animation: scaleOut 2s ease-in-out infinite;
+      |  }
+      |  .loader::after {
+      |    border-color: #EC1D91;
+      |    animation-delay: 1s;
+      |  }
+      |
+      |@keyframes scaleOut {
+      |   0% { transform: scale(0);}
+      |   100% { transform: scale(1)}
+      |}
+      |.page-loader {
+      |   position: fixed;
+      |   width: 100vw; 
+      |   height: 100vh; 
+      |   background-color: black; 
+      |   z-index: 1000; 
+      |   top: 0;
+      |   left: 0;
+      |   display: flex; 
+      |   align-items: center; 
+      |   justify-content: center; 
+      |}
+    </style>
+    section.page-loader
+      span.loader
     include burger-menu/index
 
     include header/header

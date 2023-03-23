@@ -28,7 +28,7 @@
   
   .active-nav {
     font-weight: 600;
-    color: var(--black);
+    color: var(--black) !important;
     background-color: var(--main-pink);
   }
 }
