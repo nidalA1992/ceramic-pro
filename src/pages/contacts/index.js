@@ -1,6 +1,6 @@
 import {initApp} from "../../main";
 
-import back_img from "../../assets/contacts-background.jpg"
+import back_img from "../../assets/contacts-background.png"
 
 import './index.scss';
 
