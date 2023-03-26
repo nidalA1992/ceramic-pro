@@ -16,8 +16,7 @@
   &__nav {
     height: fit-content;
     &-list {
-      @include mixins.flex(null, null, column, wrap);
-      max-height: 150px;
+      @include mixins.flex(null, null, column);
       column-gap: 80px;
     }
     &-item {
@@ -38,6 +37,7 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    flex-grow: 0;
   }
 
   .logo__img {

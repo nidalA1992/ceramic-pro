@@ -38,6 +38,10 @@ module.exports = {
         type: "asset/resource",
       },
       {
+        test: /\.(woff2)$/i,
+        type: 'asset/resource',
+      },
+      {
         test: /\.pug$/,
         loader: "pug-loader",
         options: {

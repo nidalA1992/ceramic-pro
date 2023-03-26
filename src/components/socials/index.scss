@@ -3,7 +3,8 @@
 
 .socials {
   @include mixins.flex;
-  gap: 2px;
+  gap: 15px;
+  max-width: 170px;
   
   &-link {
     height: 50px;
