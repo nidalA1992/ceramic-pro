@@ -1,12 +1,21 @@
 @use 'src/styles/mixins';
 @use 'src/styles/vars';
 
+@use "partners/partners";
+
 .footer {
-  background: var(--black-white-gradient);
+  background-color: black;
+  
+  .partners__splide {
+    img {
+      object-fit: contain;
+    }
+  }
 
   &__bottom {
     @include mixins.flex(space-between, center);
     padding-block: 40px;
+    gap: 30px;
   }
   
   &__img {
@@ -37,7 +46,7 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    flex-grow: 0;
+    flex-shrink: 0;
   }
 
   .logo__img {
@@ -45,7 +54,8 @@
   }
 
   .logo {
-    display: inline-block;
+    display: flex;
+    gap: 10px;
   }
 
   #logo-icon,
@@ -74,6 +84,24 @@
     & {
       &__logo-wrapper {
         @include mixins.flex(center, center, column)
+      }
+    }
+  }
+  
+  @media (max-width: vars.$tab-width-l) {
+    & {
+      
+      &__bottom {
+        flex-wrap: wrap;
+      }
+      .partners__splide {
+        flex-basis: 100%;
+        order: -1;
+        
+        img {
+          width: 75px;
+          height: 75px;
+        }
       }
     }
   }
