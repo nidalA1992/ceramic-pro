@@ -3,6 +3,8 @@
 @use "utils";
 @use "mixins";
 
+@use "lib/splide.min.css";
+
 @use "src/components/header/header";
 @use "src/components/footer/footer";
 @use "src/components/nav/nav";
