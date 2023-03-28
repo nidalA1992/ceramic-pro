@@ -1,0 +1,26 @@
+.partners__splide {
+  position: relative;
+  z-index: 10;
+  background-color: var(--background-main);
+  padding-block: var(--section-title-offset);
+  
+  .partners__title {
+    margin-bottom: var(--section-title-offset);
+    text-align: center;
+    z-index: 10;
+  }
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    right: -50vw;
+    left: -50vw;
+    background: var(--white) url('../../assets/Vector.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 20%;
+    z-index: -1;
+  }
+}

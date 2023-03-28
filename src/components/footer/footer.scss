@@ -5,6 +5,46 @@
 
 .footer {
   background-color: black;
+
+  &__contacts {
+    @include mixins.flex(null, null, column);
+    gap: 15px;
+    flex-basis: 45%;
+    max-width: 40ch;
+    
+    .footer__links {
+      @include mixins.flex;
+      gap: 5px;
+    }
+    
+    & > * {
+      @include mixins.font(12px, 300, null, var(--dark-grey));
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    address {
+      font-style: normal;
+    }
+    
+    span {
+      color: var(--main-pink);
+    }
+    
+    &-title {
+      color: var(--white);
+    }
+    
+    &-link {
+      display: block;
+      
+      
+      transition: color var(--tr-dur) var(--tr-tf);
+      &:hover {
+        color: var(--main-pink);
+      }
+    }
+  }
   
   .partners__splide {
     img {
@@ -13,7 +53,7 @@
   }
 
   &__bottom {
-    @include mixins.flex(space-between, center);
+    @include mixins.flex(space-between, center, null, wrap);
     padding-block: 40px;
     gap: 30px;
   }
@@ -53,6 +93,7 @@
     display: none;
   }
 
+
   .logo {
     display: flex;
     gap: 10px;
@@ -67,7 +108,13 @@
 
   @media (max-width: vars.$tab-width) {
     & {
+      &__bottom {
+        gap: 0;
+        row-gap: 50px;
+      }
+      
       &__nav {
+        flex-basis: 35%;
         &-list {
           max-height: none;
         }
@@ -77,13 +124,42 @@
           }
         }
       }
+      
+      &__contacts {
+        flex-basis: 55%;
+      }
+      
+      &__logo-wrapper {
+        flex-basis: 100%;
+      }
     }
   }
   
   @media (max-width: vars.$mob-width) {
     & {
+      &__bottom {
+        justify-content: center;
+      }      
+      
+      &__contacts {
+        order: -1;
+        flex-basis: 100%;
+        & * {
+          text-align: center;
+        }
+      }
+      
+      &__nav {
+        flex-basis: 100%;
+        
+        &-item {
+          text-align: center;
+        }
+      }
+      
       &__logo-wrapper {
-        @include mixins.flex(center, center, column)
+        @include mixins.flex(center, center, column);
+        flex-basis: 100%;
       }
     }
   }

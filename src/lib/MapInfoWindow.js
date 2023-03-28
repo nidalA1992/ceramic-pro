@@ -17,9 +17,10 @@ export class MapInfoWindow {
       <img src="/images/feedback-form.png" alt="Фото офиса Ceramic Pro"/>
       <div class="map-info__wrapper">
         <p class="map-info__row">${this.title}</p>
-        <p class="map-info__row">${this.addres}</p>
-        <p class="map-info__row">Номер: <a href="tel:${this.number}">${this.number}</a></p>
-        <p class="map-info__row">Email: <a href="mailto:${this.email}">${this.email}</a></p>
+        <p class="map-info__row text">Адрес: ${this.addres}</p>
+        <p class="map-info__row text">Номер: <a href="tel:${this.number}">${this.number}</a></p>
+        <p class="map-info__row text">Email: <a href="mailto:${this.email}">${this.email}</a></p>
+        <p class="map-info__row text">Статус: <span>Диллер</span></p>
       </div>
     `;
     

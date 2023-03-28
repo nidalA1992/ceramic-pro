@@ -4,11 +4,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = merge(common, {
-  mode: 'production',
+  mode: 'development',
   module: {
     rules: [
       {
-        test: /\.s?css$/,
+        test: /\.scss$/,
         use: [
            MiniCssExtractPlugin.loader,
           'css-loader',
@@ -21,7 +21,6 @@ module.exports = merge(common, {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css',
-
     }),
   ],
   optimization: {

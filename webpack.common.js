@@ -17,7 +17,7 @@ module.exports = {
     sertification: path.resolve(__dirname, "src", "pages", "sertification", "index.js"),
   },
   output: {
-    filename: "[name]/index.js",
+    filename: "js/[name].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
     assetModuleFilename: "images/[name][ext]",
@@ -75,7 +75,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "product",
       template: path.join(__dirname, "src", "pages", "product", "index.pug"),
-      filename: "catalog/product/index.html",
+      filename: "product/index.html",
       chunks: ["product"],
       minify: false,
     }),

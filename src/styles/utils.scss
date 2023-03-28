@@ -343,3 +343,9 @@
     
   }
 }
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-block: var(--section-offset);
+}

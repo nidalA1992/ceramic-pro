@@ -20,10 +20,12 @@ import news_2 from "../../assets/news-2.png";
 import vector from "../../assets/Vector.png";
 import logo from "../../assets/logo.png";
 import ion_news_preview from "../../assets/news-ion-preview.png";
+import ion_banner from "../../assets/main-hero-ion.png"
 
 import "./index.scss";
 
 let imgs = [
+  ion_banner,
   slide_1,
   slide_2,
   slide_3,

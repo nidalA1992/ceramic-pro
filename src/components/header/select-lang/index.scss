@@ -3,7 +3,6 @@
 .select-lang {
   position: relative;
   margin-right: 5%;
-  padding-left: 25px;
 
   img {
     position: absolute;
@@ -24,7 +23,7 @@
     user-select: none;
     background-color: transparent;
     padding-right: 15px;
-    @include mixins.font(14px, 300, null, var(--mid-grey));
+    @include mixins.font(14px, 700, null, var(--mid-grey));
     
     &:is(:hover, :active) {
       color: var(--main-pink);
@@ -43,8 +42,7 @@
       font-size: 12px;
       transition: transform var(--tr-dur) var(--tr-tf);
     }
-
-   
+    
     
     &.isOpen {
       &::before {
@@ -57,7 +55,7 @@
     position: absolute;
     top: 150%;
     left: 0;
-    width: 100%;
+    width: 120%;
     height: 0;
     overflow: hidden;
     opacity: 0;

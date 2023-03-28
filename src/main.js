@@ -7,7 +7,7 @@ import kavaca_icon from "./assets/kavaca_icon.png";
 import logo_white from "./assets/logo-white.png";
 import favicon from "./assets/favicon.png";
 import automotive from "./assets/automitive.jpg";
-import brooklyn from "./assets/brooklyn.jpg";
+import brooklyn from "./assets/brooklyn.png";
 import blesk_pro from "./assets/blesk-pro.png";
 import star_shine from "./assets/star-shine.png";
 import {Splide} from "@splidejs/splide";
@@ -26,20 +26,29 @@ window.addEventListener('load', () => {
 
 export function initApp () {
   const options_custom = {
-    ...options,
-    perPage: 3,
+    type: "loop",
+    perPage: 6,
+    arrows: false,
     pagination: false,
     gap: "50px",
-    autoWidth: true,
-    width: "50%",
-    speed: 2000,
+    width: "100%",
     breakpoints: {
-      768: {
-        width: "100%"
+      900: {
+        perPage: 4,
+        gap: "30px",
+      },
+      456: {
+        perPage: 2,
+        gap: "30px"
       }
+    },
+    autoScroll: {
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      speed: 1,
+      rewind: false
     }
   }
-  
   
   new Select(".select-lang").init();
   new ModalForm().init();

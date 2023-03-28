@@ -9,12 +9,5 @@
 @use "tests/tests";
 
 .video {
-  padding-block: var(--section-offset);
-
   background-color: white;
-}
-
-.video-wrapper {
-  display: flex;
-  justify-content: center;
 }

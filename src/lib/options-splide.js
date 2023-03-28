@@ -11,7 +11,7 @@ export const options = {
   easing: "ease-in-out",
   drag: "free",
   snap: true,
-  // autoplay: true,
+  autoplay: true,
   interval: 5000,
   resetProgress: false,
   updateOnMove: true,

@@ -2,10 +2,22 @@ include ../nav/index
 
 include ../hr/index
 footer.footer.section-wrapper
+  include partners/index
   div.footer__container
     div.footer__bottom
       +nav('footer')
-      include partners/index
+      div.footer__contacts
+        h3.footer__contacts-title Контакты:
+        address.footer__contacts-address <span>Aдрес: </span>100000, Узбекистан, г.Ташкент, Мирзо&nbsp;-&nbsp;Улугбекский р-н, ул. Хамида Алимджана, 7
+        div.footer__links 
+          span Телефоны: 
+          div
+            a.footer__contacts-link(href="tel:+998900320119") +998 (90) 0320119
+            a.footer__contacts-link(href="tel:+998901536142") +998 (90) 1536142
+        div.footer__links
+          span Email: 
+          div
+            a.footer__contacts-link(href="mailto:ceramicpro_uzbekistan@mail.ru") ceramicpro_uzbekistan@mail.ru
       div.footer__logo-wrapper
         img.footer__logo-img(src="/images/logo-white.png" alt="logo img" width=140)
         include ../logo/index
